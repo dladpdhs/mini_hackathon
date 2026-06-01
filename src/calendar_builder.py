@@ -6,6 +6,8 @@ import calendar as _calmod
 import datetime as dt
 from collections import defaultdict
 
+from .llm_extractor import parse_meeting_weekdays
+
 OVERLOAD_THRESHOLD = 3  # 같은 주에 이만큼 이상 마감/시험이 몰리면 '과부하'로 표시
 
 
@@ -23,12 +25,28 @@ def week_to_date(start: dt.date, week: int) -> dt.date:
     return start + dt.timedelta(days=7 * (week - 1))
 
 
-def _resolve_date(start: dt.date, ev: dict):
-    """이벤트의 날짜를 확정한다. (resolved_date, confirmed) 반환."""
+def _course_weekdays(course: dict) -> list[int]:
+    """과목의 수업 요일 목록(0=월~6=일). 데이터에 명시됐거나 class_time에서 추정."""
+    if course.get("meeting_weekdays"):
+        return list(course["meeting_weekdays"])
+    return parse_meeting_weekdays(course.get("class_time", "") or "")
+
+
+def _resolve_date(start: dt.date, ev: dict, meeting_wds: list[int]):
+    """이벤트의 날짜를 확정한다. (resolved_date, confirmed) 반환.
+
+    - 명시적 날짜가 있으면 그대로 사용 (확정).
+    - 주차만 있으면 그 주로 매핑하되, 이벤트에 요일이 있으면 그 요일,
+      없으면 수업 요일 중 마지막 날(시험/마감이 주 후반인 경우가 많음)에 배치 (추정).
+    """
     if ev.get("date"):
         return dt.date.fromisoformat(ev["date"]), bool(ev.get("date_confirmed", True))
     if ev.get("week"):
-        return week_to_date(start, int(ev["week"])), False  # 주차만 아는 경우(미정)
+        monday = week_to_date(start, int(ev["week"]))
+        wd = ev.get("weekday")
+        if wd is None and meeting_wds:
+            wd = meeting_wds[-1]
+        return monday + dt.timedelta(days=wd or 0), False  # 추정 날짜
     return None, False
 
 
@@ -48,10 +66,12 @@ def build_calendar(data: dict, selected_ids: list[str]) -> dict:
     by_id = {c["course_id"]: c for c in data["courses"]}
     selected = [by_id[cid] for cid in selected_ids if cid in by_id]
 
+    meeting = {c["course_id"]: _course_weekdays(c) for c in selected}
+
     events = []
     for course in selected:
         for ev in course.get("events", []):
-            resolved, confirmed = _resolve_date(start, ev)
+            resolved, confirmed = _resolve_date(start, ev, meeting[course["course_id"]])
             events.append({
                 "course": course["name"],
                 "course_id": course["course_id"],
@@ -93,9 +113,15 @@ def build_calendar(data: dict, selected_ids: list[str]) -> dict:
         wk_end = wk_start + dt.timedelta(days=6)
         lectures = []
         for course in selected:
+            wds = meeting[course["course_id"]] or [0]  # 수업 요일 모름 -> 월요일
             for wk in course.get("weekly", []):
                 if wk.get("week") == w:
-                    lectures.append({"course": course["name"], "topic": wk["topic"]})
+                    for wd in wds:  # 수업 요일마다 강의 칸 배치
+                        lectures.append({
+                            "course": course["name"],
+                            "topic": wk["topic"],
+                            "date": (wk_start + dt.timedelta(days=wd)).isoformat(),
+                        })
         wk_events = [
             e for e in dated
             if wk_start <= dt.date.fromisoformat(e["date"]) <= wk_end
@@ -129,12 +155,13 @@ def build_month_grid(cal: dict) -> list[dict]:
     for e in cal["events"]:
         events_by_date[e["date"]].append(e)
 
-    lectures_by_date = defaultdict(list)  # 각 주차 강의 -> 그 주 월요일
+    lectures_by_date = defaultdict(list)  # 각 강의 -> 실제 수업 요일 칸
     all_dates = list(events_by_date.keys())
     for wk in cal["weekly_view"]:
-        if wk["lectures"]:
-            lectures_by_date[wk["start"]].extend(wk["lectures"])
-            all_dates.append(wk["start"])
+        for lec in wk["lectures"]:
+            d = lec.get("date", wk["start"])
+            lectures_by_date[d].append(lec)
+            all_dates.append(d)
     if not all_dates:
         return []
 

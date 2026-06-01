@@ -216,6 +216,45 @@ def _guess_md(month: int, day: int):
         return None
 
 
+# --- 요일 인식 ---------------------------------------------------------------
+_WD_KO = {"월": 0, "화": 1, "수": 2, "목": 3, "금": 4, "토": 5, "일": 6}
+_WD_EN = [  # 긴 이름 먼저 매칭
+    ("monday", 0), ("tuesday", 1), ("wednesday", 2), ("thursday", 3),
+    ("friday", 4), ("saturday", 5), ("sunday", 6),
+    ("mon", 0), ("tue", 1), ("wed", 2), ("thu", 3), ("fri", 4), ("sat", 5), ("sun", 6),
+]
+
+
+def find_weekday(text: str):
+    """문자열에서 첫 번째 요일을 찾아 0(월)~6(일) 인덱스로 반환. 없으면 None."""
+    low = text.lower()
+    for name, idx in _WD_EN:
+        if re.search(r"\b" + name, low):
+            return idx
+    for ch, idx in _WD_KO.items():
+        if ch + "요일" in text:
+            return idx
+    return None
+
+
+def parse_meeting_weekdays(text: str) -> list[int]:
+    """수업 요일 집합을 추정. 예: '화/목', 'Class Time: Tuesday & Thursday' -> [1, 3]."""
+    days = set()
+    for m in re.finditer(r"([월화수목금토일])\s*[/·,~&]\s*([월화수목금토일])", text):
+        days.add(_WD_KO[m.group(1)])
+        days.add(_WD_KO[m.group(2)])
+    for ch, idx in _WD_KO.items():
+        if ch + "요일" in text:
+            days.add(idx)
+    for ln in text.splitlines():  # 영어는 수업시간 줄에서만 (오탐 방지)
+        low = ln.lower()
+        if "class time" in low or "수업시간" in low or "class:" in low:
+            for name, idx in _WD_EN:
+                if re.search(r"\b" + name, low):
+                    days.add(idx)
+    return sorted(days)
+
+
 def _extract_events(text: str, weekly: list[dict]) -> list[dict]:
     events = []
     seen = set()
@@ -229,7 +268,8 @@ def _extract_events(text: str, weekly: list[dict]) -> list[dict]:
             if key not in seen:
                 seen.add(key)
                 events.append({"title": title, "type": t, "date": None,
-                               "time": None, "week": wk["week"], "date_confirmed": False})
+                               "time": None, "week": wk["week"],
+                               "weekday": find_weekday(wk["topic"]), "date_confirmed": False})
 
     # (2) 명시적 날짜가 있는 줄 -> 확정 이벤트
     for line in text.splitlines():
@@ -252,7 +292,8 @@ def _extract_events(text: str, weekly: list[dict]) -> list[dict]:
             continue
         seen.add(key)
         events.append({"title": title, "type": t, "date": date_iso,
-                       "time": None, "week": None, "date_confirmed": True})
+                       "time": None, "week": None,
+                       "weekday": find_weekday(line), "date_confirmed": True})
 
     return events
 
@@ -266,6 +307,7 @@ def heuristic_extract(text: str, filename: str | None = None) -> dict:
         "credits": _extract_credits(text),
         "instructor": "",
         "class_time": "",
+        "meeting_weekdays": parse_meeting_weekdays(text),
         "grading": _extract_grading(text),
         "weekly": weekly,
         "events": _extract_events(text, weekly),
