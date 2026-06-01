@@ -57,7 +57,8 @@ PAGE = """
       <label class="course flex items-center gap-2 p-2 rounded hover:bg-slate-50 cursor-pointer">
         <input type="checkbox" name="course" value="{{ c.course_id }}">
         <span class="font-medium">{{ c.name }}</span>
-        <span class="text-xs text-slate-400">{{ c.name_en }} · {{ c.credits or '?' }}학점</span>
+        {% if c.instructor %}<span class="text-xs bg-slate-100 rounded px-1.5 py-0.5">{{ c.instructor }}{% if c.section %} · {{ c.section }}분반{% endif %}</span>{% endif %}
+        <span class="text-xs text-slate-400">{{ c.credits or '?' }}학점{% if c.class_time %} · {{ c.class_time }}{% endif %}</span>
       </label>
       {% endfor %}
     </div>
@@ -92,16 +93,28 @@ RESULT = """
 <div class="max-w-5xl mx-auto p-6">
   <a href="{{ url_for('index') }}" class="text-sm text-indigo-600">← 다시 선택</a>
   <h1 class="text-2xl font-bold mt-2">📅 {{ cal.courses|length }}개 과목 학기 캘린더</h1>
-  <p class="text-slate-500 mb-4">{% for c in cal.courses %}<span class="inline-block bg-slate-200 rounded px-2 py-0.5 text-xs mr-1">{{ c.name }}</span>{% endfor %}</p>
+  <p class="mb-4">{% for c in cal.courses %}<span class="inline-flex items-center gap-1 bg-slate-100 rounded px-2 py-0.5 text-xs mr-1">
+    <span style="width:9px;height:9px;border-radius:50%;background:{{ c.color }};display:inline-block"></span>{{ c.name }}</span>{% endfor %}</p>
 
   <a href="{{ ics_url }}" class="inline-block bg-green-600 text-white px-4 py-2 rounded-lg mb-4">⬇ .ics 캘린더 다운로드 (구글/애플 캘린더 import)</a>
 
-  <div class="text-xs mb-4 flex gap-3 flex-wrap">
-    <span class="text-purple-600">■ 강의</span>
+  {% if cal.upcoming %}
+  <div class="bg-rose-50 border border-rose-200 rounded-xl p-4 mb-4">
+    <h2 class="font-bold text-rose-700">🔔 마감 임박 (오늘 {{ cal.today }} 기준 14일 이내)</h2>
+    {% for e in cal.upcoming %}
+    <p class="text-sm mt-1 text-rose-700">· <b>D-{{ e.d_day }}</b> {{ e.date }} — {{ e.course }} · {{ e.title }}</p>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <div class="text-xs mb-4 flex gap-3 flex-wrap text-slate-500">
+    <span>유형:</span>
+    <span class="text-purple-600">📘 강의</span>
     <span class="text-blue-600">■ 과제</span>
     <span class="text-orange-600">■ 퀴즈</span>
     <span class="text-red-600">■ 시험</span>
     <span class="text-pink-600">■ 발표</span>
+    <span class="ml-2">· 칩 왼쪽 색띠 = 과목 구분</span>
   </div>
 
   {% if cal.overloaded_weeks %}
@@ -126,15 +139,15 @@ RESULT = """
     {% for week in mon.weeks %}
       <tr>
       {% for d in week %}
-        <td class="cell border align-top p-1 {{ '' if d.in_month else 'bg-slate-50 text-slate-300' }}">
+        <td class="cell border align-top p-1 {% if not d.in_month %}bg-slate-50 text-slate-300{% elif d.is_today %}bg-yellow-50{% elif d.weekend %}bg-slate-50{% endif %}">
           {% if d.in_month %}
-          <div class="text-xs text-slate-400">{{ d.day }}</div>
+          <div class="text-xs {% if d.is_today %}font-bold text-yellow-700{% else %}text-slate-400{% endif %}">{{ d.day }}{% if d.is_today %} ·오늘{% endif %}</div>
           {% for l in d.lectures %}
-          <span class="chip bg-purple-100 text-purple-700" title="{{ l.course }}: {{ l.topic }}">📘 {{ l.topic }}</span>
+          <span class="chip bg-purple-50 text-purple-700" style="border-left:3px solid {{ l.color }}" title="{{ l.course }}: {{ l.topic }}">📘 {{ l.topic }}</span>
           {% endfor %}
           {% for e in d.events %}
           <span class="chip {% if e.type=='exam' %}bg-red-100 text-red-700{% elif e.type=='quiz' %}bg-orange-100 text-orange-700{% elif e.type=='assignment' %}bg-blue-100 text-blue-700{% else %}bg-pink-100 text-pink-700{% endif %}"
-                title="{{ e.course }} · {{ e.title }}">{{ e.title }}</span>
+                style="border-left:3px solid {{ e.color }}" title="{{ e.course }} · {{ e.title }}">{{ e.title }}</span>
           {% endfor %}
           {% endif %}
         </td>

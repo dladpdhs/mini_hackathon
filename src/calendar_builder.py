@@ -9,6 +9,21 @@ from collections import defaultdict
 from .llm_extractor import parse_meeting_weekdays
 
 OVERLOAD_THRESHOLD = 3  # 같은 주에 이만큼 이상 마감/시험이 몰리면 '과부하'로 표시
+UPCOMING_DAYS = 14      # 오늘 기준 며칠 안의 마감을 '임박'으로 표시
+
+# 과목(분반)별 구분 색 팔레트
+_PALETTE = ["#2563eb", "#dc2626", "#16a34a", "#9333ea", "#ea580c",
+            "#0891b2", "#db2777", "#65a30d", "#7c3aed", "#0d9488"]
+
+
+def course_label(course: dict) -> str:
+    """선택 목록/범례에 쓸 표시 이름. 예: '대학글쓰기 1 · 이지원 (002)'."""
+    parts = [course["name"]]
+    if course.get("instructor"):
+        parts.append(" · " + course["instructor"])
+    if course.get("section"):
+        parts.append(f" ({course['section']})")
+    return "".join(parts)
 
 
 def load_courses(path: str) -> dict:
@@ -67,14 +82,18 @@ def build_calendar(data: dict, selected_ids: list[str]) -> dict:
     selected = [by_id[cid] for cid in selected_ids if cid in by_id]
 
     meeting = {c["course_id"]: _course_weekdays(c) for c in selected}
+    colors = {c["course_id"]: _PALETTE[i % len(_PALETTE)] for i, c in enumerate(selected)}
+    labels = {c["course_id"]: course_label(c) for c in selected}
 
     events = []
     for course in selected:
+        cid = course["course_id"]
         for ev in course.get("events", []):
-            resolved, confirmed = _resolve_date(start, ev, meeting[course["course_id"]])
+            resolved, confirmed = _resolve_date(start, ev, meeting[cid])
             events.append({
-                "course": course["name"],
-                "course_id": course["course_id"],
+                "course": labels[cid],
+                "course_id": cid,
+                "color": colors[cid],
                 "title": ev["title"],
                 "type": ev.get("type", "lecture"),
                 "date": resolved.isoformat() if resolved else None,
@@ -113,12 +132,14 @@ def build_calendar(data: dict, selected_ids: list[str]) -> dict:
         wk_end = wk_start + dt.timedelta(days=6)
         lectures = []
         for course in selected:
-            wds = meeting[course["course_id"]] or [0]  # 수업 요일 모름 -> 월요일
+            cid = course["course_id"]
+            wds = meeting[cid] or [0]  # 수업 요일 모름 -> 월요일
             for wk in course.get("weekly", []):
                 if wk.get("week") == w:
                     for wd in wds:  # 수업 요일마다 강의 칸 배치
                         lectures.append({
-                            "course": course["name"],
+                            "course": labels[cid],
+                            "color": colors[cid],
                             "topic": wk["topic"],
                             "date": (wk_start + dt.timedelta(days=wd)).isoformat(),
                         })
@@ -134,12 +155,26 @@ def build_calendar(data: dict, selected_ids: list[str]) -> dict:
             "events": wk_events,
         })
 
+    # 마감 임박 (오늘 기준 UPCOMING_DAYS 이내)
+    today = dt.date.today()
+    horizon = today + dt.timedelta(days=UPCOMING_DAYS)
+    upcoming = []
+    for e in dated:
+        d = dt.date.fromisoformat(e["date"])
+        if today <= d <= horizon and e["type"] != "lecture":
+            ev = dict(e)
+            ev["d_day"] = (d - today).days
+            upcoming.append(ev)
+
     return {
         "events": dated,
         "tbd_events": tbd,
         "overloaded_weeks": overloaded,
         "weekly_view": weekly_view,
-        "courses": [{"course_id": c["course_id"], "name": c["name"]} for c in selected],
+        "upcoming": upcoming,
+        "today": today.isoformat(),
+        "courses": [{"course_id": c["course_id"], "name": labels[c["course_id"]],
+                     "color": colors[c["course_id"]]} for c in selected],
     }
 
 
@@ -168,6 +203,7 @@ def build_month_grid(cal: dict) -> list[dict]:
     dmin = min(dt.date.fromisoformat(d) for d in all_dates)
     dmax = max(dt.date.fromisoformat(d) for d in all_dates)
 
+    today = dt.date.today()
     cal_obj = _calmod.Calendar(firstweekday=0)  # 월요일 시작
     months = []
     y, m = dmin.year, dmin.month
@@ -181,6 +217,8 @@ def build_month_grid(cal: dict) -> list[dict]:
                     "day": day.day,
                     "date": iso,
                     "in_month": day.month == m,
+                    "is_today": day == today,
+                    "weekend": day.weekday() >= 5,
                     "events": events_by_date.get(iso, []),
                     "lectures": lectures_by_date.get(iso, []),
                 })
