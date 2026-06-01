@@ -1,0 +1,152 @@
+# SyllaSync — 강의계획서 기반 학기 캘린더 자동 생성기
+
+여러 과목의 강의계획서(PDF)를 분석해 **한 학기 전체 일정(퀴즈·과제·시험·발표)**을 하나의
+캘린더로 통합하고, **마감이 몰리는 과부하 주차를 자동으로 경고**하며, 구글/애플 캘린더로 바로
+import 할 수 있는 **`.ics` 파일**을 만들어 줍니다.
+
+## 0. team members (Name & Student ID)
+
+| 이름 | 학번 | 역할 |
+|---|---|---|
+| (작성) | (작성) | 강의계획서 파싱 / LLM 추출기 |
+| (작성) | (작성) | 캘린더 통합 · 과부하 감지 로직 |
+| (작성) | (작성) | 웹 UI (Flask) · .ics 생성 |
+| (작성) | (작성) | mock 데이터셋 구축 · README · 테스트 |
+
+## 1. Problem
+
+대학생은 보통 한 학기에 5~6과목을 듣고, 각 과목의 퀴즈·과제·중간/기말고사 일정은 **강의계획서
+PDF에 흩어져** 있습니다. 학생들은 이 일정을 일일이 읽고 손으로 옮겨 적어야 하며, 그 과정에서
+**여러 과목의 마감이 같은 주에 겹치는 "과부하 주차"**를 미리 알아채기 어렵습니다. 그 결과 마감을
+놓치거나, 시험 기간에 과제가 한꺼번에 몰려 학업 부담이 급증합니다.
+
+SyllaSync는 강의계획서를 자동으로 분석해 학기 전체 일정을 한눈에 보여주고, 부담이 몰리는 주를
+미리 경고함으로써 학생이 학기 초에 계획을 세울 수 있도록 돕습니다.
+
+## 2. Target Users
+
+- 여러 과목을 수강하며 일정 관리를 하고 싶은 **재학생**
+- 새내기처럼 강의계획서를 처음 접하고 학기 계획을 세우려는 **신입생**
+- 자신이 담당하는/들을 과목의 일정 부담을 점검하려는 **조교·수강 설계자**
+
+## 3. Assumed Campus Data
+
+`data/courses.json` 에 과목별 정보를 저장합니다. 이 데이터는 **실제 2026-1학기 강의계획서 PDF
+5종**(`data/syllabi/` 에 동봉)에서 추출해 만든 것이며, 실제 서비스에서는 같은 형식으로 20~40개
+과목까지 확장할 수 있습니다.
+
+| File | Columns / Fields | Description |
+|---|---|---|
+| `data/courses.json` | `semester`, `courses[]` | 학기 시작일 + 과목 리스트 |
+| `courses[].course_id / name / credits / grading` | str / int | 과목 메타 정보 |
+| `courses[].weekly[]` | `week`, `topic` | 주차별 강의 주제 |
+| `courses[].events[]` | `title`, `type`, `date`, `time`, `week`, `date_confirmed` | 과제/퀴즈/시험/발표 일정. 날짜가 명시된 경우 `date_confirmed=true`, "추후 공지"인 경우 `week`만 채우고 `false` |
+| `data/syllabi/*.pdf` | — | 데이터 추출의 원본이 된 실제 강의계획서 PDF |
+
+`type` 값: `assignment`(과제), `quiz`(퀴즈), `exam`(시험), `presentation`(발표), `lecture`(강의).
+
+## 4. User Input
+
+사용자는 **자신이 듣는 과목의 `course_id` 목록**을 입력합니다. `sample_input.json` 구조:
+
+```json
+{
+  "selected_courses": [
+    "034.001",
+    "physics_lab_1",
+    "english_foundations_008",
+    "academic_writing_1"
+  ]
+}
+```
+
+웹 모드에서는 이 입력을 **체크박스 선택** 또는 **새 강의계획서 PDF 업로드**로 대신합니다.
+
+## 5. Pipeline
+
+```
+[강의계획서 PDF]
+      │  src/pdf_parser.py  (pdfplumber 로 텍스트 추출)
+      ▼
+[평문 텍스트]
+      │  src/llm_extractor.py  (하이브리드)
+      │     · API 키 있음 → LLM 호출로 구조화 JSON 추출 (과제/시험/퀴즈 자동 분류)
+      │     · API 키 없음 → 규칙 기반 파서로 폴백
+      ▼
+[구조화 데이터 courses.json]  ← 동봉된 5과목은 미리 구축됨
+      │
+[사용자 입력: 듣는 과목 선택]  (sample_input.json / 웹 체크박스)
+      │  src/calendar_builder.py
+      │     · 선택 과목들의 일정을 하나의 타임라인으로 통합·정렬
+      │     · 주차 단위로 묶어 마감/시험이 3건 이상 몰린 '과부하 주차' 감지
+      │     · 날짜 미정(TBD) 항목 분리
+      ▼
+[통합 캘린더]
+      │  src/ics_export.py
+      ▼
+[출력]  콘솔/웹 화면(주차별 일정 + 과부하 경고) + semester.ics 파일
+```
+
+각 단계는 입력·출력이 명확히 분리돼 있어, 새 과목 추가(업로드)나 데이터셋 확장이 쉽습니다.
+
+## 6. How to Run
+
+```bash
+# 1) 의존성 설치
+pip install -r requirements.txt
+
+# 2-a) 웹 모드 (권장) — 실행 후 브라우저에서 http://127.0.0.1:5000 접속
+python main.py
+
+# 2-b) CLI 모드 — sample_input.json 으로 즉시 결과 출력 + semester.ics 생성
+python main.py --cli
+```
+
+> **API 키 없이도 그대로 실행됩니다.** 동봉된 5개 과목 데이터셋과 규칙 기반 분석으로 동작합니다.
+> 새 PDF를 LLM으로 정확히 분석하고 싶다면 `pip install openai` (또는 `anthropic`) 후 환경변수
+> `OPENAI_API_KEY`(또는 `ANTHROPIC_API_KEY`)를 설정하세요. 그러면 업로드한 강의계획서를
+> 실시간으로 분석합니다.
+
+## 7. Example Output(s)
+
+`python main.py --cli` 실행 결과 (4과목 선택 시):
+
+```
+============================================================
+선택 과목: 물리학 1, 물리학실험 1, 기초영어, 대학글쓰기 1
+============================================================
+
+[통합 일정 - 날짜순]
+  2026-03-20  [assignment] 물리학 1 · HW #1 마감
+  2026-03-23  [assignment] 대학글쓰기 1 · 과제 1 (분석적 읽기와 논평)  (추정)
+  2026-03-26  [quiz] 기초영어 · Quiz 1
+  2026-03-27  [assignment] 물리학실험 1 · 예비실험 보고서 제출 마감
+  ...
+  2026-04-23  [exam] 기초영어 · Midterm Exam
+  2026-04-24 19:00  [exam] 물리학 1 · 중간고사 (Ch. 2~12)
+  ...
+  2026-06-12 19:00  [exam] 물리학 1 · 기말고사 (Ch. 13~20)
+  2026-06-13 10:00  [exam] 대학글쓰기 1 · 기말고사 (종합시험)
+
+[⚠️ 과부하 주의 주차]
+  2026-04-20 주: 4건 (과제 2 초고, HW #3 마감, Midterm Exam, 중간고사 (Ch. 2~12))
+  2026-06-08 주: 6건 (과제 3 최종본, Final Exam, HW #5 마감, 실험 보고서 최종 제출 마감,
+                      기말고사 (Ch. 13~20), 기말고사 (종합시험))
+
+[📌 날짜 미정 (강의 중 공지)]
+  대학글쓰기 1 · 과제 1 (분석적 읽기와 논평) (약 4주차)
+
+✅ 캘린더 파일 저장: .../semester.ics
+```
+
+웹 모드에서는 같은 결과를 주차별 카드 + 과부하 경고 배너 + `.ics 다운로드` 버튼으로 보여줍니다.
+생성된 `semester.ics`는 구글 캘린더 → 설정 → 가져오기에서 바로 추가할 수 있습니다.
+
+## 8. Team Contributions
+
+- **강의계획서 파싱 / LLM 추출기**: `src/pdf_parser.py`, `src/llm_extractor.py` — PDF 텍스트 추출 및 LLM/규칙 기반 하이브리드 구조화
+- **캘린더 통합 · 과부하 감지**: `src/calendar_builder.py` — 다과목 일정 병합, 주차 단위 과부하 탐지, TBD 처리
+- **웹 UI · .ics 생성**: `src/app.py`, `src/ics_export.py`, `main.py` — Flask 화면, iCalendar 파일 생성
+- **데이터셋 · README · 테스트**: `data/courses.json`, `data/syllabi/`, 본 문서 및 실행 검증
+
+*(각 팀원 이름과 학번을 위 0번 표와 함께 채워주세요.)*
