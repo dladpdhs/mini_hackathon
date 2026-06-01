@@ -31,6 +31,19 @@ def _all_courses():
     return DATASET["courses"]
 
 
+def _grouped_courses():
+    """과목명으로 묶어 2단계 선택용 구조로 반환. [{name, sections:[course...]}]."""
+    groups = {}
+    order = []
+    for c in DATASET["courses"]:
+        key = c["name"]
+        if key not in groups:
+            groups[key] = []
+            order.append(key)
+        groups[key].append(c)
+    return [{"name": k, "sections": groups[k]} for k in order]
+
+
 PAGE = """
 <!doctype html><html lang="ko"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,16 +63,28 @@ PAGE = """
 
   <form action="{{ url_for('generate') }}" method="post" class="bg-white rounded-xl shadow p-5 mb-6">
     <label class="font-semibold">1) 듣는 과목을 선택하세요</label>
-    <input id="search" placeholder="과목 검색..." onkeyup="filt()"
+    <input id="search" placeholder="과목명·교수로 검색..." onkeyup="filt()"
            class="w-full border rounded px-3 py-2 my-3 text-sm">
-    <div id="list" class="space-y-2 max-h-72 overflow-auto">
-      {% for c in courses %}
-      <label class="course flex items-center gap-2 p-2 rounded hover:bg-slate-50 cursor-pointer">
-        <input type="checkbox" name="course" value="{{ c.course_id }}">
-        <span class="font-medium">{{ c.name }}</span>
-        {% if c.instructor %}<span class="text-xs bg-slate-100 rounded px-1.5 py-0.5">{{ c.instructor }}{% if c.section %} · {{ c.section }}분반{% endif %}</span>{% endif %}
-        <span class="text-xs text-slate-400">{{ c.credits or '?' }}학점{% if c.class_time %} · {{ c.class_time }}{% endif %}</span>
-      </label>
+    <div id="list" class="space-y-1 max-h-80 overflow-auto">
+      {% for g in groups %}
+      <details class="group border rounded" data-search="{{ g.name }} {% for c in g.sections %}{{ c.instructor }} {% endfor %}">
+        <summary class="p-2 cursor-pointer font-medium flex items-center justify-between">
+          <span>{{ g.name }}</span>
+          <span class="text-xs text-slate-400">{% if g.sections|length > 1 %}{{ g.sections|length }}개 분반 ▾{% else %}선택 ▾{% endif %}</span>
+        </summary>
+        <div class="pl-3 pr-2 pb-2 space-y-1 border-t bg-slate-50">
+          {% for c in g.sections %}
+          <label class="flex items-center gap-2 p-1.5 text-sm rounded hover:bg-white cursor-pointer">
+            <input type="checkbox" name="course" value="{{ c.course_id }}">
+            <span style="width:8px;height:8px;border-radius:50%;background:#94a3b8;display:inline-block"></span>
+            <span class="font-medium">
+              {% if c.instructor %}{{ c.instructor }}{% if c.section %} · {{ c.section }}분반{% endif %}{% else %}기본 강좌{% endif %}
+            </span>
+            <span class="text-xs text-slate-400">{{ c.credits or '?' }}학점{% if c.class_time %} · {{ c.class_time }}{% endif %}</span>
+          </label>
+          {% endfor %}
+        </div>
+      </details>
       {% endfor %}
     </div>
     <button class="mt-4 bg-slate-900 text-white px-5 py-2 rounded-lg w-full">학기 캘린더 만들기</button>
@@ -74,8 +99,15 @@ PAGE = """
   </form>
 </div>
 <script>
-function filt(){let q=document.getElementById('search').value.toLowerCase();
-document.querySelectorAll('.course').forEach(e=>{e.style.display=e.innerText.toLowerCase().includes(q)?'':'none';});}
+function filt(){
+  let q=document.getElementById('search').value.toLowerCase().trim();
+  document.querySelectorAll('.group').forEach(e=>{
+    let hay=(e.getAttribute('data-search')||'').toLowerCase();
+    let hit = !q || hay.includes(q);
+    e.style.display = hit ? '' : 'none';
+    if(q && hit){ e.open = true; }   // 검색 중이면 펼쳐서 분반 바로 보이게
+  });
+}
 </script>
 </body></html>
 """
@@ -172,7 +204,7 @@ RESULT = """
 
 @app.route("/")
 def index():
-    return render_template_string(PAGE, courses=_all_courses(), has_key=_has_api_key())
+    return render_template_string(PAGE, groups=_grouped_courses(), has_key=_has_api_key())
 
 
 @app.route("/generate", methods=["POST"])
