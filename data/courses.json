@@ -6,312 +6,2840 @@
   },
   "courses": [
     {
-      "course_id": "034.001",
-      "course_no": "034.001",
-      "name": "물리학 1",
-      "name_en": "Physics 1",
-      "credits": 3,
-      "department": "물리천문학부",
-      "instructor": "",
-      "class_time": "주 2회 (각 75분)",
+      "course_id": "freshman_seminar",
+      "course_no": "053.001",
+      "name": "신입생세미나: 창의와 도전",
+      "name_en": "",
+      "credits": null,
+      "department": "",
+      "section": "046",
+      "instructor": "권오남",
+      "class_time": "",
+      "meeting_weekdays": [],
       "classroom": "",
-      "textbook": "Halliday, Resnick & Walker, Principles of Physics (11th ed.), Wiley",
-      "grading": "중간고사 100 + 기말고사 100 + 과제물 50 + 출석/기타",
+      "textbook": "",
+      "grading": "3. 평가방법",
+      "no_ai_policy": false,
+      "weekly": [],
+      "events": []
+    },
+    {
+      "course_id": "ae_culture_blackmirror",
+      "course_no": "",
+      "name": "고급영어: 문화와 사회 (Black Mirror)",
+      "name_en": "",
+      "credits": null,
+      "department": "",
+      "section": "",
+      "instructor": "Nick Clements",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
+      "textbook": "",
+      "grading": "",
       "no_ai_policy": false,
       "weekly": [
-        {"week": 1, "topic": "2. Motion Along a Straight Line / 3. Vectors"},
-        {"week": 2, "topic": "4. Motion in Two and Three Dimensions"},
-        {"week": 3, "topic": "5. Force and Motion (I) / 6. Force and Motion (II)"},
-        {"week": 4, "topic": "7. Kinetic Energy and Work / 8. Potential Energy and Conservation of Energy"},
-        {"week": 5, "topic": "9. Center of Mass and Linear Momentum"},
-        {"week": 6, "topic": "10. Rotation"},
-        {"week": 7, "topic": "11. Rolling, Torque, and Angular Momentum / 12. Equilibrium and Elasticity"},
-        {"week": 8, "topic": "Prep Days / 중간고사"},
-        {"week": 9, "topic": "13. Gravitation / 14. Fluids"},
-        {"week": 10, "topic": "15. Oscillations"},
-        {"week": 11, "topic": "16. Waves (I) / 17. Waves (II)"},
-        {"week": 12, "topic": "18. Temperature, Heat, and the First Law of Thermodynamics"},
-        {"week": 13, "topic": "19. The Kinetic Theory of Gases"},
-        {"week": 14, "topic": "20. Entropy and the Second Law of Thermodynamics"},
-        {"week": 15, "topic": "Prep Days / 기말고사"}
+        {
+          "week": 1,
+          "topic": "3/4 (W) Course introduction"
+        },
+        {
+          "week": 2,
+          "topic": "3/9 (M) Social/cultural/literary background of Black Mirror, principles/terminol"
+        },
+        {
+          "week": 3,
+          "topic": "3/16 (M) Black Mirror episode: “Nosedive” (continued), Reading: Black Mirror's"
+        },
+        {
+          "week": 4,
+          "topic": "3/23 (M) Black Mirror episode: “Fifteen Million Merits”"
+        },
+        {
+          "week": 5,
+          "topic": "3/30 (M) Black Mirror episode: “San Junipero”"
+        },
+        {
+          "week": 6,
+          "topic": "4/6 (M) Black Mirror episode: “USS Callister”"
+        },
+        {
+          "week": 7,
+          "topic": "4/13 (M) Reading: The Veldt, by Ray Bradbury"
+        },
+        {
+          "week": 8,
+          "topic": "4/20 (M) Mid-semester oral assessment"
+        },
+        {
+          "week": 9,
+          "topic": "4/27 (M) Black Mirror episode: “Eulogy”"
+        },
+        {
+          "week": 10,
+          "topic": "5/4 (M) Reading: The Truth of Fact, the Truth of Feeling, by Ted Chiang"
+        },
+        {
+          "week": 11,
+          "topic": "5/11 (M) Black Mirror episode: “White Bear”"
+        },
+        {
+          "week": 12,
+          "topic": "5/18 (M) Black Mirror episode: “White Christmas” (continued), Reading: White Chr"
+        },
+        {
+          "week": 13,
+          "topic": "5/25 (M) No class (public holiday)"
+        },
+        {
+          "week": 14,
+          "topic": "6/1 (M) Reading: The Minority Report, by Philip K. Dick"
+        },
+        {
+          "week": 15,
+          "topic": "6/8 (M) Reading: The Minority Report, by Philip K. Dick (continued)"
+        },
+        {
+          "week": 16,
+          "topic": "6/15 (M) Course review/reflection (Note: this is a make-up class for 5/25)"
+        },
+        {
+          "week": 17,
+          "topic": "6/24 (W) Final draft of second formal essay due via e-mail by 11:59 p.m. (no cla"
+        }
       ],
       "events": [
-        {"title": "HW #1 부여 (Ch. 2-4)", "type": "assignment", "date": "2026-03-06", "date_confirmed": true},
-        {"title": "HW #1 마감", "type": "assignment", "date": "2026-03-20", "date_confirmed": true},
-        {"title": "HW #2 마감", "type": "assignment", "date": "2026-04-03", "date_confirmed": true},
-        {"title": "HW #3 마감", "type": "assignment", "date": "2026-04-23", "date_confirmed": true},
-        {"title": "중간고사 (Ch. 2~12)", "type": "exam", "date": "2026-04-24", "time": "19:00", "date_confirmed": true},
-        {"title": "HW #4 마감", "type": "assignment", "date": "2026-05-22", "date_confirmed": true},
-        {"title": "HW #5 마감", "type": "assignment", "date": "2026-06-12", "date_confirmed": true},
-        {"title": "기말고사 (Ch. 13~20)", "type": "exam", "date": "2026-06-12", "time": "19:00", "date_confirmed": true}
+        {
+          "title": "기말고사/Final",
+          "type": "exam",
+          "date": "2026-06-17",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "6/10 (W) Peer review for sec",
+          "type": "exam",
+          "date": "2026-06-10",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        }
       ]
     },
     {
-      "course_id": "physics_lab_1",
+      "course_id": "physics1",
+      "course_no": "034.001",
+      "name": "물리학 1",
+      "name_en": "",
+      "credits": 1,
+      "department": "",
+      "section": "",
+      "instructor": "",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
+      "textbook": "",
+      "grading": "중간고사 100 + 기말고사 100 + 과제물 50 + 출석/기타",
+      "no_ai_policy": false,
+      "weekly": [
+        {
+          "week": 1,
+          "topic": "2. Motion Along a Straight Line / 3. Vectors"
+        },
+        {
+          "week": 2,
+          "topic": "4. Motion in Two and Three Dimensions"
+        },
+        {
+          "week": 3,
+          "topic": "5. Force and Motion (I) / 6. Force and Motion (II)"
+        },
+        {
+          "week": 4,
+          "topic": "7. Kinetic Energy and Work / 8. Potential Energy"
+        },
+        {
+          "week": 5,
+          "topic": "9. Center of Mass and Linear Momentum"
+        },
+        {
+          "week": 6,
+          "topic": "10. Rotation"
+        },
+        {
+          "week": 7,
+          "topic": "11. Rolling, Torque, and Angular Momentum / 12. Equilibrium"
+        },
+        {
+          "week": 8,
+          "topic": "Prep Days / 중간고사"
+        },
+        {
+          "week": 9,
+          "topic": "13. Gravitation / 14. Fluids"
+        },
+        {
+          "week": 10,
+          "topic": "15. Oscillations"
+        },
+        {
+          "week": 11,
+          "topic": "16. Waves (I) / 17. Waves (II)"
+        },
+        {
+          "week": 12,
+          "topic": "18. Temperature, Heat, First Law of Thermodynamics"
+        },
+        {
+          "week": 13,
+          "topic": "19. The Kinetic Theory of Gases"
+        },
+        {
+          "week": 14,
+          "topic": "20. Entropy and the Second Law"
+        },
+        {
+          "week": 15,
+          "topic": "Prep Days / 기말고사"
+        }
+      ],
+      "events": [
+        {
+          "title": "HW #1 마감",
+          "type": "assignment",
+          "date": "2026-03-20",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "HW #2 마감",
+          "type": "assignment",
+          "date": "2026-04-03",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "HW #3 마감",
+          "type": "assignment",
+          "date": "2026-04-23",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "중간고사 (Ch. 2~12)",
+          "type": "exam",
+          "date": "2026-04-24",
+          "time": "19:00",
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "HW #4 마감",
+          "type": "assignment",
+          "date": "2026-05-22",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "HW #5 마감",
+          "type": "assignment",
+          "date": "2026-06-12",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "기말고사 (Ch. 13~20)",
+          "type": "exam",
+          "date": "2026-06-12",
+          "time": "19:00",
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        }
+      ]
+    },
+    {
+      "course_id": "latin1",
+      "course_no": "F29.103",
+      "name": "라틴어 1",
+      "name_en": "",
+      "credits": 3,
+      "department": "",
+      "section": "003",
+      "instructor": "최미",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
+      "textbook": "",
+      "grading": "성적비율 20% 40% 40% 100%",
+      "no_ai_policy": false,
+      "weekly": [
+        {
+          "week": 1,
+          "topic": "2. 고전 라틴어와 교재에 관하여"
+        },
+        {
+          "week": 2,
+          "topic": "3인칭 단수 현재 시제와 문장의 직접 목적어, 라틴어의"
+        },
+        {
+          "week": 3,
+          "topic": "1. 교재 3과: 명사의 단수 1, 2, 3변화"
+        },
+        {
+          "week": 4,
+          "topic": "1. 교재 4과: 동사의 단수 1, 2, 3인칭 현재 시제, 라틴어의"
+        },
+        {
+          "week": 5,
+          "topic": "1. 교재 5과: 명사의 복수 주격, 동사의 3인칭 복수 현재"
+        },
+        {
+          "week": 6,
+          "topic": "1. 교재 6과: 동사의 3인칭 미완료 시제(imperfect tense)와"
+        },
+        {
+          "week": 7,
+          "topic": "1. 교재 7과: 동사의 완료 시제 심화: 불규칙한 형태의 완료"
+        },
+        {
+          "week": 8,
+          "topic": "4/20: 1-7과 문법 사항 복습"
+        },
+        {
+          "week": 9,
+          "topic": "1. 교재 8과: 명사의 대격 단·복수, 형용사의 최상급"
+        },
+        {
+          "week": 10,
+          "topic": "1. 교재 9과: 명사의 여격(dative case), 대명사 단수 1,"
+        },
+        {
+          "week": 11,
+          "topic": "1. 교재 10과: 대명사 복수 1, 2인칭의 주격, 여격, 대격,"
+        },
+        {
+          "week": 12,
+          "topic": "1. 교재 11과: 여격을 취하는 동사, 의문문"
+        },
+        {
+          "week": 13,
+          "topic": "(5/27) 1. 교재 12과: 동사의 미완료 시제와 완료 시제의 1, 2인칭"
+        },
+        {
+          "week": 14,
+          "topic": "(6/1) 1. 교재 12과 진도 계속"
+        },
+        {
+          "week": 15,
+          "topic": "6/8: 8-12과 문법 사항 복습"
+        }
+      ],
+      "events": []
+    },
+    {
+      "course_id": "physics_lab1",
       "course_no": "",
       "name": "물리학실험 1",
-      "name_en": "Physics Lab 1",
-      "credits": 1,
-      "department": "물리천문학부",
+      "name_en": "",
+      "credits": null,
+      "department": "",
+      "section": "",
       "instructor": "",
-      "class_time": "주 1회",
-      "classroom": "26동 3층 (26-302~306)",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
       "textbook": "",
       "grading": "실험 보고서 + 예비실험 + 동영상 교육",
       "no_ai_policy": false,
       "weekly": [
-        {"week": 1, "topic": "No Class"},
-        {"week": 2, "topic": "오리엔테이션, 동영상 교육 0"},
-        {"week": 3, "topic": "예비 실험 및 보고서 작성"},
-        {"week": 4, "topic": "동영상 교육 1"},
-        {"week": 5, "topic": "실험 1주차 (분반별 로테이션)"},
-        {"week": 6, "topic": "동영상 교육 2"},
-        {"week": 7, "topic": "실험 2주차"},
-        {"week": 8, "topic": "동영상 교육 3"},
-        {"week": 9, "topic": "실험 3주차"},
-        {"week": 10, "topic": "동영상 교육 4"},
-        {"week": 11, "topic": "실험 4주차"},
-        {"week": 12, "topic": "동영상 교육 5"},
-        {"week": 13, "topic": "실험 5주차 (보고서 작성 실험)"},
-        {"week": 14, "topic": "보충 실험"},
-        {"week": 15, "topic": "실험 보고서 제출 마감"}
+        {
+          "week": 1,
+          "topic": "No Class"
+        },
+        {
+          "week": 2,
+          "topic": "오리엔테이션, 동영상 교육 0"
+        },
+        {
+          "week": 3,
+          "topic": "예비 실험 및 보고서 작성"
+        },
+        {
+          "week": 4,
+          "topic": "동영상 교육 1"
+        },
+        {
+          "week": 5,
+          "topic": "실험 1주차 (분반별 로테이션)"
+        },
+        {
+          "week": 6,
+          "topic": "동영상 교육 2"
+        },
+        {
+          "week": 7,
+          "topic": "실험 2주차"
+        },
+        {
+          "week": 8,
+          "topic": "동영상 교육 3"
+        },
+        {
+          "week": 9,
+          "topic": "실험 3주차"
+        },
+        {
+          "week": 10,
+          "topic": "동영상 교육 4"
+        },
+        {
+          "week": 11,
+          "topic": "실험 4주차"
+        },
+        {
+          "week": 12,
+          "topic": "동영상 교육 5"
+        },
+        {
+          "week": 13,
+          "topic": "실험 5주차 (보고서 작성)"
+        },
+        {
+          "week": 14,
+          "topic": "보충 실험"
+        },
+        {
+          "week": 15,
+          "topic": "실험 보고서 제출 마감"
+        }
       ],
       "events": [
-        {"title": "예비실험 보고서 제출 마감", "type": "assignment", "date": "2026-03-27", "date_confirmed": true},
-        {"title": "실험 보고서 제출 마감 (14주차분)", "type": "assignment", "date": "2026-06-05", "date_confirmed": true},
-        {"title": "실험 보고서 최종 제출 마감", "type": "assignment", "date": "2026-06-12", "date_confirmed": true}
+        {
+          "title": "예비실험 보고서 마감",
+          "type": "assignment",
+          "date": "2026-03-27",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "실험 보고서 마감(14주차분)",
+          "type": "assignment",
+          "date": "2026-06-05",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "실험 보고서 최종 마감",
+          "type": "assignment",
+          "date": "2026-06-12",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        }
       ]
     },
     {
-      "course_id": "english_foundations_008",
+      "course_id": "philosophy_sex_ethics",
+      "course_no": "",
+      "name": "성의 철학과 성윤리",
+      "name_en": "",
+      "credits": null,
+      "department": "",
+      "section": "003",
+      "instructor": "장성빈",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
+      "textbook": "",
+      "grading": "출석 10%",
+      "no_ai_policy": false,
+      "weekly": [
+        {
+          "week": 1,
+          "topic": "강의소개 (3/3, 3/5)"
+        },
+        {
+          "week": 2,
+          "topic": "섹스, 젠더, 섹슈얼리티의 개념 (1) (3/10, 3/12)"
+        },
+        {
+          "week": 3,
+          "topic": "섹스, 젠더, 섹슈얼리티의 개념 (2) (3/17, 3/19)"
+        },
+        {
+          "week": 4,
+          "topic": "성 평등 (1): 성 평등 담론의 역사와 유산 (1) (3/24, 3/26)"
+        },
+        {
+          "week": 5,
+          "topic": "성 평등 (2): 성 평등 담론의 역사와 유산 (2) (3/31, 4/2)"
+        },
+        {
+          "week": 6,
+          "topic": "친밀관계와 지배 (1): 가족은 여전히 유효한가? (4/7, 4/9)"
+        },
+        {
+          "week": 7,
+          "topic": "친밀관계와 지배 (2): ‘좋은’ 사랑의 불/가능성 (4/14, 4/16)"
+        },
+        {
+          "week": 8,
+          "topic": "성윤리의 관점들: 보수주의, 자유주의, 급진주의? (4/23)"
+        },
+        {
+          "week": 9,
+          "topic": "<토론 ① 이성애는 ‘자연스러운’ 것인가?> (4/28, 4/30)"
+        },
+        {
+          "week": 10,
+          "topic": "<토론 ② 성적 취향을 정상/비정상으로 구분할 수 있는가?> (5/5-zoom, 5/7)"
+        },
+        {
+          "week": 11,
+          "topic": "<토론 ③ 섹스돌/섹스로봇은 허용되어야 하는가?> (5/12, 5/14)"
+        },
+        {
+          "week": 12,
+          "topic": "<토론 ④ 포르노그래피는 규제되어야 하는가?> (5/19, 5/21)"
+        },
+        {
+          "week": 13,
+          "topic": "<토론 ⑤ 성매매는 자유로운 선택일까?> (5/26, 5/28)"
+        },
+        {
+          "week": 14,
+          "topic": "<토론 ⑥ 임신중단은 여성의 권리인가?> (6/2, 6/4)"
+        },
+        {
+          "week": 15,
+          "topic": "보고서 아이디어 발표회(6/9, 6/11) + 기말시험 (6/16)"
+        }
+      ],
+      "events": [
+        {
+          "title": "기말고사/Final",
+          "type": "exam",
+          "date": null,
+          "time": null,
+          "week": 15,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "기말고사/Final",
+          "type": "presentation",
+          "date": "2026-06-09",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        }
+      ]
+    },
+    {
+      "course_id": "modern_society_ethics",
+      "course_no": "",
+      "name": "현대사회와 윤리",
+      "name_en": "",
+      "credits": null,
+      "department": "",
+      "section": "",
+      "instructor": "서원주",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
+      "textbook": "",
+      "grading": "* 과제 및 발표 50%, 중간고사 30%, 출석 20%",
+      "no_ai_policy": false,
+      "weekly": [
+        {
+          "week": 1,
+          "topic": "강의소개"
+        },
+        {
+          "week": 2,
+          "topic": "불평등 – 1% 대 99%"
+        },
+        {
+          "week": 3,
+          "topic": "시장화 – 시장의 한계는 어디까지인가? (과제 1)"
+        },
+        {
+          "week": 4,
+          "topic": "능력주의 – ‘능력에 따른 분배’는 공정한가? (과제 2)"
+        },
+        {
+          "week": 5,
+          "topic": "플랫폼 노동 – 노동이 노동으로 불리지 않는 시대: 불안정 노동의 현재와 미래"
+        },
+        {
+          "week": 6,
+          "topic": "기술 - “기계가 일자리를 뺏어간다!” (과제 3)"
+        },
+        {
+          "week": 7,
+          "topic": "미디어 – 소셜 미디어는 상호이해와 공론영역에 도움이 되는가? (과제 4)"
+        },
+        {
+          "week": 8,
+          "topic": "전쟁 – 정의로운 전쟁은 가능한가? (과제 5)"
+        },
+        {
+          "week": 9,
+          "topic": "기후변화 – 기후위기는 부정의인가? 이를 어떻게 막을 것인가? (과제 6)"
+        },
+        {
+          "week": 10,
+          "topic": "난민 – 지구 반대편의 난민을 수용해야 할 의무가 있는가? (과제 7)"
+        },
+        {
+          "week": 11,
+          "topic": "중간고사"
+        },
+        {
+          "week": 12,
+          "topic": "여행 – 여행은 우리에게 무엇을 제공하는가? (과제 8)"
+        },
+        {
+          "week": 13,
+          "topic": "혐오 – 정치·사회적 의미의 혐오란 무엇이며, 이를 어떻게 규제할 것인가? (과제 9)"
+        },
+        {
+          "week": 14,
+          "topic": "사랑 – 사랑은 여전히 이 사회에 중요한가? (과제 10)"
+        }
+      ],
+      "events": [
+        {
+          "title": "과제 1",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 3,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "과제 2",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 4,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "과제 3",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 6,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "과제 4",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 7,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "과제 5",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 8,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "과제 6",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 9,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "과제 7",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 10,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "중간고사",
+          "type": "exam",
+          "date": null,
+          "time": null,
+          "week": 11,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "과제 8",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 12,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "과제 9",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 13,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "과제 10",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 14,
+          "weekday": null,
+          "date_confirmed": false
+        }
+      ]
+    },
+    {
+      "course_id": "english_foundations",
       "course_no": "",
       "name": "기초영어",
-      "name_en": "English Foundations (008)",
-      "credits": 3,
-      "department": "교양",
+      "name_en": "",
+      "credits": null,
+      "department": "",
+      "section": "008",
       "instructor": "Heeyoun Cho",
-      "class_time": "화/목 11:00-12:15",
-      "classroom": "3-213",
-      "textbook": "Lansford, L. et al. (2019). Perspectives 2. National Geographic Learning.",
-      "grading": "출석 15 / 참여 10 / 중간 20 / 기말 20 / 발표 10 / 글쓰기 15 / 퀴즈 10 (Pass/Fail, 80% 이상 통과)",
-      "no_ai_policy": true,
+      "class_time": "",
+      "meeting_weekdays": [
+        1,
+        3
+      ],
+      "classroom": "",
+      "textbook": "",
+      "grading": "출석15/참여10/중간20/기말20/발표10/글쓰기15/퀴즈10 (Pass/Fail)",
+      "no_ai_policy": false,
       "weekly": [
-        {"week": 1, "topic": "Introduction / Unit 1. Feelings"},
-        {"week": 2, "topic": "Unit 1. Feelings"},
-        {"week": 3, "topic": "Unit 1. Feelings"},
-        {"week": 4, "topic": "Unit 4. Food"},
-        {"week": 5, "topic": "Unit 4. Food"},
-        {"week": 6, "topic": "Unit 4. Food / Unit 5. Work"},
-        {"week": 7, "topic": "Unit 5. Work"},
-        {"week": 8, "topic": "Unit 5. Work / Midterm Exam"},
-        {"week": 9, "topic": "Unit 5. Work / Unit 9. Entertainment"},
-        {"week": 10, "topic": "Unit 9. Entertainment"},
-        {"week": 11, "topic": "Unit 9. Entertainment"},
-        {"week": 12, "topic": "Unit 10. Time"},
-        {"week": 13, "topic": "Unit 10. Time"},
-        {"week": 14, "topic": "Presentations"},
-        {"week": 15, "topic": "Unit 10. Time / Final Exam"}
+        {
+          "week": 1,
+          "topic": "Introduction / Unit 1. Feelings"
+        },
+        {
+          "week": 2,
+          "topic": "Unit 1. Feelings"
+        },
+        {
+          "week": 3,
+          "topic": "Unit 1. Feelings"
+        },
+        {
+          "week": 4,
+          "topic": "Unit 4. Food"
+        },
+        {
+          "week": 5,
+          "topic": "Unit 4. Food"
+        },
+        {
+          "week": 6,
+          "topic": "Unit 4. Food / Unit 5. Work"
+        },
+        {
+          "week": 7,
+          "topic": "Unit 5. Work"
+        },
+        {
+          "week": 8,
+          "topic": "Unit 5. Work / Midterm"
+        },
+        {
+          "week": 9,
+          "topic": "Unit 5. Work / Unit 9. Entertainment"
+        },
+        {
+          "week": 10,
+          "topic": "Unit 9. Entertainment"
+        },
+        {
+          "week": 11,
+          "topic": "Unit 9. Entertainment"
+        },
+        {
+          "week": 12,
+          "topic": "Unit 10. Time"
+        },
+        {
+          "week": 13,
+          "topic": "Unit 10. Time"
+        },
+        {
+          "week": 14,
+          "topic": "Presentations"
+        },
+        {
+          "week": 15,
+          "topic": "Unit 10. Time / Final"
+        }
       ],
       "events": [
-        {"title": "Quiz 1", "type": "quiz", "date": "2026-03-26", "date_confirmed": true},
-        {"title": "Assignment #1", "type": "assignment", "date": "2026-04-09", "date_confirmed": true},
-        {"title": "Midterm Exam", "type": "exam", "date": "2026-04-23", "date_confirmed": true},
-        {"title": "Assignment #2", "type": "assignment", "date": "2026-05-07", "date_confirmed": true},
-        {"title": "Quiz 2", "type": "quiz", "date": "2026-05-21", "date_confirmed": true},
-        {"title": "Presentation", "type": "presentation", "date": "2026-06-02", "date_confirmed": true},
-        {"title": "Final Exam", "type": "exam", "date": "2026-06-11", "date_confirmed": true}
+        {
+          "title": "Quiz 1",
+          "type": "quiz",
+          "date": "2026-03-26",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "Assignment #1",
+          "type": "assignment",
+          "date": "2026-04-09",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "Midterm Exam",
+          "type": "exam",
+          "date": "2026-04-23",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "Assignment #2",
+          "type": "assignment",
+          "date": "2026-05-07",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "Quiz 2",
+          "type": "quiz",
+          "date": "2026-05-21",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "Presentation",
+          "type": "presentation",
+          "date": "2026-06-02",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "Final Exam",
+          "type": "exam",
+          "date": "2026-06-11",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        }
       ]
     },
     {
-      "course_id": "academic_writing_1",
+      "course_id": "academic_writing1",
       "course_no": "",
       "name": "대학글쓰기 1",
-      "name_en": "Academic Writing 1",
-      "credits": 3,
-      "department": "기초교육원",
-      "section": "001",
-      "instructor": "김현수",
-      "class_time": "월/수 10:00-11:15",
-      "classroom": "",
-      "textbook": "서울대학교 대학글쓰기 1 교재편찬위원회 편, 《대학글쓰기 1》, 개정판, 2026.",
-      "grading": "출석 10 / 과제 50 / 기말 20 / 태도 20 (과제 3회 + 발표 1회)",
-      "no_ai_policy": true,
-      "weekly": [
-        {"week": 1, "topic": "대학생활과 글쓰기"},
-        {"week": 2, "topic": "글 읽기와 비판적 사고 1"},
-        {"week": 3, "topic": "글 읽기와 비판적 사고 2 (이해와 요약)"},
-        {"week": 4, "topic": "실습 및 글쓰기 상담 (1)"},
-        {"week": 5, "topic": "글쓰기의 과정 (1) - 주제 탐색"},
-        {"week": 6, "topic": "글쓰기의 과정 (2) - 자료 수집"},
-        {"week": 7, "topic": "글쓰기 실습 - 개요 작성"},
-        {"week": 8, "topic": "글쓰기의 방법 (1) - 정의/비교/분류"},
-        {"week": 9, "topic": "글쓰기의 방법 (2) - 서사/묘사/논증"},
-        {"week": 10, "topic": "실습 및 글쓰기 상담 (2)"},
-        {"week": 11, "topic": "글쓰기의 과정 (4) - 인용/문장 쓰기"},
-        {"week": 12, "topic": "명료하게 쓰기 / 고쳐 쓰기"},
-        {"week": 13, "topic": "글쓰기의 실제 - 발표 및 상호 논평"},
-        {"week": 14, "topic": "발표 및 상호 논평"},
-        {"week": 15, "topic": "학기말 종합시험"}
-      ],
-      "events": [
-        {"title": "과제 1 (분석적 읽기와 논평)", "type": "assignment", "week": 4, "date": null, "date_confirmed": false},
-        {"title": "과제 2 초고", "type": "assignment", "week": 8, "date": null, "date_confirmed": false},
-        {"title": "과제 2 수정본", "type": "assignment", "week": 11, "date": null, "date_confirmed": false},
-        {"title": "과제 3 발표", "type": "presentation", "week": 13, "date": null, "date_confirmed": false},
-        {"title": "기말고사 (종합시험)", "type": "exam", "date": "2026-06-13", "time": "10:00", "date_confirmed": true},
-        {"title": "과제 3 최종본", "type": "assignment", "week": 15, "date": null, "date_confirmed": false}
-      ]
-    },
-    {
-      "course_id": "academic_writing_2",
-      "course_no": "",
-      "name": "대학글쓰기 1",
-      "name_en": "Academic Writing 1",
-      "credits": 3,
-      "department": "기초교육원",
-      "section": "002",
-      "instructor": "이지원",
-      "class_time": "화/목 13:00-14:15",
-      "classroom": "",
-      "textbook": "서울대학교 대학글쓰기 1 교재편찬위원회 편, 《대학글쓰기 1》, 개정판, 2026.",
-      "grading": "출석 10 / 과제 50 / 기말 20 / 태도 20 (과제 3회 + 발표 1회)",
-      "no_ai_policy": true,
-      "weekly": [
-        {"week": 1, "topic": "대학생활과 글쓰기"},
-        {"week": 2, "topic": "글 읽기와 비판적 사고 1"},
-        {"week": 3, "topic": "글 읽기와 비판적 사고 2 (이해와 요약)"},
-        {"week": 4, "topic": "실습 및 글쓰기 상담 (1)"},
-        {"week": 5, "topic": "글쓰기의 과정 (1) - 주제 탐색"},
-        {"week": 6, "topic": "글쓰기의 과정 (2) - 자료 수집"},
-        {"week": 7, "topic": "글쓰기 실습 - 개요 작성"},
-        {"week": 8, "topic": "글쓰기의 방법 (1) - 정의/비교/분류"},
-        {"week": 9, "topic": "글쓰기의 방법 (2) - 서사/묘사/논증"},
-        {"week": 10, "topic": "실습 및 글쓰기 상담 (2)"},
-        {"week": 11, "topic": "글쓰기의 과정 (4) - 인용/문장 쓰기"},
-        {"week": 12, "topic": "명료하게 쓰기 / 고쳐 쓰기"},
-        {"week": 13, "topic": "글쓰기의 실제 - 발표 및 상호 논평"},
-        {"week": 14, "topic": "발표 및 상호 논평"},
-        {"week": 15, "topic": "학기말 종합시험"}
-      ],
-      "events": [
-        {"title": "과제 1 (분석적 읽기와 논평)", "type": "assignment", "week": 4, "date": null, "date_confirmed": false},
-        {"title": "과제 2 초고", "type": "assignment", "week": 8, "date": null, "date_confirmed": false},
-        {"title": "과제 2 수정본", "type": "assignment", "week": 11, "date": null, "date_confirmed": false},
-        {"title": "과제 3 발표", "type": "presentation", "week": 13, "date": null, "date_confirmed": false},
-        {"title": "기말고사 (종합시험)", "type": "exam", "date": "2026-06-13", "time": "10:00", "date_confirmed": true},
-        {"title": "과제 3 최종본", "type": "assignment", "week": 15, "date": null, "date_confirmed": false}
-      ]
-    },
-    {
-      "course_id": "academic_writing_3",
-      "course_no": "",
-      "name": "대학글쓰기 1",
-      "name_en": "Academic Writing 1",
-      "credits": 3,
-      "department": "기초교육원",
-      "section": "003",
-      "instructor": "박서준",
-      "class_time": "금 09:00-11:45",
-      "classroom": "",
-      "textbook": "서울대학교 대학글쓰기 1 교재편찬위원회 편, 《대학글쓰기 1》, 개정판, 2026.",
-      "grading": "출석 10 / 과제 50 / 기말 20 / 태도 20 (과제 3회 + 발표 1회)",
-      "no_ai_policy": true,
-      "weekly": [
-        {"week": 1, "topic": "대학생활과 글쓰기"},
-        {"week": 2, "topic": "글 읽기와 비판적 사고 1"},
-        {"week": 3, "topic": "글 읽기와 비판적 사고 2 (이해와 요약)"},
-        {"week": 4, "topic": "실습 및 글쓰기 상담 (1)"},
-        {"week": 5, "topic": "글쓰기의 과정 (1) - 주제 탐색"},
-        {"week": 6, "topic": "글쓰기의 과정 (2) - 자료 수집"},
-        {"week": 7, "topic": "글쓰기 실습 - 개요 작성"},
-        {"week": 8, "topic": "글쓰기의 방법 (1) - 정의/비교/분류"},
-        {"week": 9, "topic": "글쓰기의 방법 (2) - 서사/묘사/논증"},
-        {"week": 10, "topic": "실습 및 글쓰기 상담 (2)"},
-        {"week": 11, "topic": "글쓰기의 과정 (4) - 인용/문장 쓰기"},
-        {"week": 12, "topic": "명료하게 쓰기 / 고쳐 쓰기"},
-        {"week": 13, "topic": "글쓰기의 실제 - 발표 및 상호 논평"},
-        {"week": 14, "topic": "발표 및 상호 논평"},
-        {"week": 15, "topic": "학기말 종합시험"}
-      ],
-      "events": [
-        {"title": "과제 1 (분석적 읽기와 논평)", "type": "assignment", "week": 4, "date": null, "date_confirmed": false},
-        {"title": "과제 2 초고", "type": "assignment", "week": 8, "date": null, "date_confirmed": false},
-        {"title": "과제 2 수정본", "type": "assignment", "week": 11, "date": null, "date_confirmed": false},
-        {"title": "과제 3 발표", "type": "presentation", "week": 13, "date": null, "date_confirmed": false},
-        {"title": "기말고사 (종합시험)", "type": "exam", "date": "2026-06-13", "time": "10:00", "date_confirmed": true},
-        {"title": "과제 3 최종본", "type": "assignment", "week": 15, "date": null, "date_confirmed": false}
-      ]
-    },
-    {
-      "course_id": "F32.102L",
-      "course_no": "F32.102L",
-      "name": "통계학실험",
-      "name_en": "Statistics Lab",
-      "credits": 1,
-      "department": "통계학과",
+      "name_en": "",
+      "credits": null,
+      "department": "",
+      "section": "",
       "instructor": "",
       "class_time": "",
+      "meeting_weekdays": [],
       "classroom": "",
-      "textbook": "일반통계학 (서울대학교 자연과학대학 통계학과 저, 3판, 한빛아카데미) / 주교재는 eTL 배포",
-      "grading": "출석 10 / 과제 30 / 중간 30 / 기말 30 (상대평가, 과제 4회 이상)",
-      "no_ai_policy": true,
+      "textbook": "",
+      "grading": "출석10/과제50/기말20/태도20 (과제 3회 + 발표 1회)",
+      "no_ai_policy": false,
       "weekly": [
-        {"week": 1, "topic": "프로그램 소개"},
-        {"week": 2, "topic": "1장. 자료의 생성에 관련된 실습"},
-        {"week": 3, "topic": "2장. 모집단과 표본에 관련된 실습"},
-        {"week": 4, "topic": "3장. 확률과 확률분포 관련된 실습"},
-        {"week": 5, "topic": "3장. 확률과 확률분포 관련된 실습"},
-        {"week": 6, "topic": "4장. 표본분포 관련된 실습"},
-        {"week": 7, "topic": "4장. 표본분포 관련된 실습"},
-        {"week": 8, "topic": "5장. 통계적 추론 관련된 실습"},
-        {"week": 9, "topic": "6장. 분포에 관한 추론 (일표본/이표본/대응표본)"},
-        {"week": 10, "topic": "6장. 분포에 관한 추론 (일표본/이표본/대응표본)"},
-        {"week": 11, "topic": "7장. 이산자료의 분석 (카이제곱 검정)"},
-        {"week": 12, "topic": "8장. 상관분석과 회귀분석 (단순/중회귀분석)"},
-        {"week": 13, "topic": "8장. 상관분석과 회귀분석 (단순/중회귀분석)"},
-        {"week": 14, "topic": "9장. 분산분석 (일원배치/이원배치)"},
-        {"week": 15, "topic": "9장. 분산분석 (일원배치/이원배치)"}
+        {
+          "week": 1,
+          "topic": "대학생활과 글쓰기"
+        },
+        {
+          "week": 2,
+          "topic": "글 읽기와 비판적 사고 1"
+        },
+        {
+          "week": 3,
+          "topic": "글 읽기와 비판적 사고 2"
+        },
+        {
+          "week": 4,
+          "topic": "실습 및 글쓰기 상담 (1)"
+        },
+        {
+          "week": 5,
+          "topic": "글쓰기의 과정 (1) - 주제 탐색"
+        },
+        {
+          "week": 6,
+          "topic": "글쓰기의 과정 (2) - 자료 수집"
+        },
+        {
+          "week": 7,
+          "topic": "글쓰기 실습 - 개요 작성"
+        },
+        {
+          "week": 8,
+          "topic": "글쓰기의 방법 (1)"
+        },
+        {
+          "week": 9,
+          "topic": "글쓰기의 방법 (2)"
+        },
+        {
+          "week": 10,
+          "topic": "실습 및 글쓰기 상담 (2)"
+        },
+        {
+          "week": 11,
+          "topic": "글쓰기의 과정 (4) - 인용"
+        },
+        {
+          "week": 12,
+          "topic": "명료하게 쓰기 / 고쳐 쓰기"
+        },
+        {
+          "week": 13,
+          "topic": "발표 및 상호 논평"
+        },
+        {
+          "week": 14,
+          "topic": "발표 및 상호 논평"
+        },
+        {
+          "week": 15,
+          "topic": "학기말 종합시험"
+        }
       ],
       "events": [
-        {"title": "중간고사 (반별 일정 공지)", "type": "exam", "week": 8, "date": null, "date_confirmed": false},
-        {"title": "기말고사 (반별 일정 공지)", "type": "exam", "week": 15, "date": null, "date_confirmed": false},
-        {"title": "과제 (학기 중 4회 이상, 반별 공지)", "type": "assignment", "week": null, "date": null, "date_confirmed": false}
+        {
+          "title": "과제 1 (분석적 읽기와 논평)",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 4,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "과제 2 초고",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 8,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "과제 2 수정본",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 11,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "과제 3 발표",
+          "type": "presentation",
+          "date": null,
+          "time": null,
+          "week": 13,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "기말고사 (종합시험)",
+          "type": "exam",
+          "date": "2026-06-13",
+          "time": "10:00",
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "과제 3 최종본",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 15,
+          "weekday": null,
+          "date_confirmed": false
+        }
       ]
     },
     {
-      "course_id": "E11.104",
-      "course_no": "E11.104",
-      "name": "독서세미나-《맹자》",
-      "name_en": "Reading Seminar - Mencius",
-      "credits": 3,
-      "department": "교양 (여름학기)",
-      "instructor": "임부연",
+      "course_id": "general_biology1",
+      "course_no": "",
+      "name": "일반생물학 1",
+      "name_en": "",
+      "credits": null,
+      "department": "",
+      "section": "",
+      "instructor": "",
       "class_time": "",
+      "meeting_weekdays": [],
       "classroom": "",
-      "textbook": "금장태 옮김, 《우리말 사서四書-맹자》, 지식과교양, 2013",
-      "grading": "출석 30 / 과제 70 (절대평가, 시험 없음)",
+      "textbook": "",
+      "grading": "*4. 평가방법",
       "no_ai_policy": false,
-      "term_note": "2026 여름학기 (집중 강좌, 회차 기준)",
       "weekly": [
-        {"week": 1, "topic": "맹자의 삶과 《맹자》 소개, 강좌의 취지와 강의 방식"},
-        {"week": 2, "topic": "도덕의 이상, 어짊[仁]과 의로움[義]"},
-        {"week": 3, "topic": "왕도(王道)와 패도(覇道)"},
-        {"week": 4, "topic": "성군(聖君)과 폭군(暴君)"},
-        {"week": 5, "topic": "계층의 분화와 분업의 도리"},
-        {"week": 6, "topic": "인재의 등용과 인물의 평가"},
-        {"week": 7, "topic": "인륜 교육, 효도와 공손의 도리"},
-        {"week": 8, "topic": "선한 본성의 발명(發明)"},
-        {"week": 9, "topic": "마음의 욕구와 사단(四端)"},
-        {"week": 10, "topic": "하늘을 알고 따르는 인생의 지혜"},
-        {"week": 11, "topic": "욕구의 절제와 자기 반성"},
-        {"week": 12, "topic": "부동심(不動心)과 호연지기(浩然之氣), 지언(知言)"},
-        {"week": 13, "topic": "지성(至誠)의 감동, 대장부(大丈夫)의 기상"},
-        {"week": 14, "topic": "탐구 보고서 제출"},
-        {"week": 15, "topic": "개인 보고서 제출"}
+        {
+          "week": 1,
+          "topic": "03/03"
+        },
+        {
+          "week": 2,
+          "topic": "03/10 Chapter 5. Biological Macromolecules and Lipids"
+        },
+        {
+          "week": 3,
+          "topic": "03/17 Chapter 7. Cell Structure and Function ※ 필요에 따라 평가 관련 조정, 별도 고사실 제공"
+        },
+        {
+          "week": 4,
+          "topic": "03/24 Chapter 9. Cellular Signaling"
+        },
+        {
+          "week": 5,
+          "topic": "03/31 Chapter 11. Photosynthetic Processes"
+        },
+        {
+          "week": 6,
+          "topic": "04/07 Chapter 13. Sexual Life Cycles and Meiosis 관련하여 문의사항이 있는 학생들은 담당교수 현유봉(02-"
+        },
+        {
+          "week": 7,
+          "topic": "04/14 Chapter 15. Linkage and Chromosomes ◎ 강의계획서 직접입력 시 필수 입력 항목: *, **"
+        },
+        {
+          "week": 8,
+          "topic": "04/21 Chapter 16. Nucleic Acids and Inheritance"
+        },
+        {
+          "week": 9,
+          "topic": "04/28 Chapter 18. Control of Gene Expression1"
+        },
+        {
+          "week": 10,
+          "topic": "05/05 어린이날"
+        },
+        {
+          "week": 11,
+          "topic": "05/12 Chapter 20. The Evolution of Genomes"
+        },
+        {
+          "week": 12,
+          "topic": "05/19 Chapter 22. Phylogenetic Reconstruction"
+        },
+        {
+          "week": 13,
+          "topic": "05/26 Chapter 24. Species and Speciation"
+        },
+        {
+          "week": 14,
+          "topic": "06/02 Chapter 26. Introduction to Viruses"
+        },
+        {
+          "week": 15,
+          "topic": "06/09 Chapter 28. The Origin and Evolution of Eukaryotes"
+        }
       ],
       "events": [
-        {"title": "탐구 보고서 제출 (A4 3쪽, 30점)", "type": "assignment", "week": 14, "date": null, "date_confirmed": false},
-        {"title": "개인 보고서 제출 (A4 4쪽, 40점)", "type": "assignment", "week": 15, "date": null, "date_confirmed": false}
+        {
+          "title": "과제",
+          "type": "assignment",
+          "date": "2026-03-12",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "03/19 Chapter 8. Cell Membra",
+          "type": "assignment",
+          "date": "2026-03-19",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        }
+      ]
+    },
+    {
+      "course_id": "biology1",
+      "course_no": "F35.104",
+      "name": "생물학 1",
+      "name_en": "",
+      "credits": 3,
+      "department": "",
+      "section": "003",
+      "instructor": "",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
+      "textbook": "",
+      "grading": "성적비율 5 0 45 45 0 5 100%",
+      "no_ai_policy": false,
+      "weekly": [
+        {
+          "week": 1,
+          "topic": "O.T., 생명의 원리, 생명의 화학/물"
+        },
+        {
+          "week": 2,
+          "topic": "거대 분자/세포 구조와 막"
+        },
+        {
+          "week": 3,
+          "topic": "세포구조와 막, 물질대사"
+        },
+        {
+          "week": 4,
+          "topic": "물질대사/세포의 신호와 반응,"
+        },
+        {
+          "week": 5,
+          "topic": "세포주기와 세포분열/유전.유전자.염색체"
+        },
+        {
+          "week": 6,
+          "topic": "유전.유전자.염색체/DNA와 유전"
+        },
+        {
+          "week": 7,
+          "topic": "전사와 번역"
+        },
+        {
+          "week": 8,
+          "topic": "시험/유전자발현 조절"
+        },
+        {
+          "week": 9,
+          "topic": "유전체/진화의 과정"
+        },
+        {
+          "week": 10,
+          "topic": "계통발생/유전자와 유전체 진화"
+        },
+        {
+          "week": 11,
+          "topic": "유전자와 유전체 진화/종분화"
+        },
+        {
+          "week": 12,
+          "topic": "지구 생명의 역사/원핵생물과 바이러스의 다양성"
+        },
+        {
+          "week": 13,
+          "topic": "원생생물/식물의 다양성"
+        },
+        {
+          "week": 14,
+          "topic": "균류의 다양성/동물의 다양성"
+        },
+        {
+          "week": 15,
+          "topic": "동물의 다양성/시험"
+        }
+      ],
+      "events": []
+    },
+    {
+      "course_id": "reading_seminar_mencius",
+      "course_no": "E11.104",
+      "name": "독서세미나-《맹자》",
+      "name_en": "",
+      "credits": 3,
+      "department": "",
+      "section": "",
+      "instructor": "임부연",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
+      "textbook": "",
+      "grading": "출석 30 / 과제 70 (절대평가, 시험 없음)",
+      "no_ai_policy": false,
+      "weekly": [
+        {
+          "week": 1,
+          "topic": "맹자의 삶과 《맹자》 소개"
+        },
+        {
+          "week": 2,
+          "topic": "도덕의 이상, 어짊[仁]과 의로움[義]"
+        },
+        {
+          "week": 3,
+          "topic": "왕도(王道)와 패도(覇道)"
+        },
+        {
+          "week": 4,
+          "topic": "성군(聖君)과 폭군(暴君)"
+        },
+        {
+          "week": 5,
+          "topic": "계층의 분화와 분업의 도리"
+        },
+        {
+          "week": 6,
+          "topic": "인재의 등용과 인물의 평가"
+        },
+        {
+          "week": 7,
+          "topic": "인륜 교육, 효도와 공손"
+        },
+        {
+          "week": 8,
+          "topic": "선한 본성의 발명(發明)"
+        },
+        {
+          "week": 9,
+          "topic": "마음의 욕구와 사단(四端)"
+        },
+        {
+          "week": 10,
+          "topic": "하늘을 알고 따르는 지혜"
+        },
+        {
+          "week": 11,
+          "topic": "욕구의 절제와 자기 반성"
+        },
+        {
+          "week": 12,
+          "topic": "부동심과 호연지기, 지언"
+        },
+        {
+          "week": 13,
+          "topic": "지성(至誠)의 감동, 대장부"
+        },
+        {
+          "week": 14,
+          "topic": "탐구 보고서 제출"
+        },
+        {
+          "week": 15,
+          "topic": "개인 보고서 제출"
+        }
+      ],
+      "events": [
+        {
+          "title": "탐구 보고서 제출 (30점)",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 14,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "개인 보고서 제출 (40점)",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 15,
+          "weekday": null,
+          "date_confirmed": false
+        }
+      ]
+    },
+    {
+      "course_id": "statistics_lab",
+      "course_no": "F32.102L",
+      "name": "통계학실험",
+      "name_en": "",
+      "credits": 1,
+      "department": "",
+      "section": "",
+      "instructor": "",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
+      "textbook": "",
+      "grading": "출석10/과제30/중간30/기말30 (상대평가, 과제 4회 이상)",
+      "no_ai_policy": false,
+      "weekly": [
+        {
+          "week": 1,
+          "topic": "프로그램 소개"
+        },
+        {
+          "week": 2,
+          "topic": "1장. 자료의 생성"
+        },
+        {
+          "week": 3,
+          "topic": "2장. 모집단과 표본"
+        },
+        {
+          "week": 4,
+          "topic": "3장. 확률과 확률분포"
+        },
+        {
+          "week": 5,
+          "topic": "3장. 확률과 확률분포"
+        },
+        {
+          "week": 6,
+          "topic": "4장. 표본분포"
+        },
+        {
+          "week": 7,
+          "topic": "4장. 표본분포"
+        },
+        {
+          "week": 8,
+          "topic": "5장. 통계적 추론"
+        },
+        {
+          "week": 9,
+          "topic": "6장. 분포에 관한 추론"
+        },
+        {
+          "week": 10,
+          "topic": "6장. 분포에 관한 추론"
+        },
+        {
+          "week": 11,
+          "topic": "7장. 이산자료 분석 (카이제곱)"
+        },
+        {
+          "week": 12,
+          "topic": "8장. 상관/회귀분석"
+        },
+        {
+          "week": 13,
+          "topic": "8장. 상관/회귀분석"
+        },
+        {
+          "week": 14,
+          "topic": "9장. 분산분석"
+        },
+        {
+          "week": 15,
+          "topic": "9장. 분산분석"
+        }
+      ],
+      "events": [
+        {
+          "title": "중간고사 (반별 공지)",
+          "type": "exam",
+          "date": null,
+          "time": null,
+          "week": 8,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "기말고사 (반별 공지)",
+          "type": "exam",
+          "date": null,
+          "time": null,
+          "week": 15,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "과제 (학기 중 4회 이상)",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": false
+        }
+      ]
+    },
+    {
+      "course_id": "ae_literature",
+      "course_no": "",
+      "name": "고급영어: 문학 (Decoding Love)",
+      "name_en": "",
+      "credits": null,
+      "department": "",
+      "section": "",
+      "instructor": "Jane Lim",
+      "class_time": "",
+      "meeting_weekdays": [
+        1,
+        3
+      ],
+      "classroom": "",
+      "textbook": "",
+      "grading": "",
+      "no_ai_policy": false,
+      "weekly": [],
+      "events": [
+        {
+          "title": "중간고사",
+          "type": "exam",
+          "date": "2026-04-23",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "기말고사/Final",
+          "type": "exam",
+          "date": "2026-06-11",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        }
+      ]
+    },
+    {
+      "course_id": "college_english2_oh",
+      "course_no": "F21.201",
+      "name": "대학영어 2",
+      "name_en": "",
+      "credits": 3,
+      "department": "",
+      "section": "009",
+      "instructor": "Hansol Oh",
+      "class_time": "",
+      "meeting_weekdays": [
+        0,
+        2
+      ],
+      "classroom": "",
+      "textbook": "",
+      "grading": "",
+      "no_ai_policy": false,
+      "weekly": [
+        {
+          "week": 1,
+          "topic": "W Course Overview"
+        },
+        {
+          "week": 2,
+          "topic": "Chapter 1 Getting Ready to Write"
+        },
+        {
+          "week": 3,
+          "topic": "Chapter 2 Writing Paragraphs"
+        },
+        {
+          "week": 4,
+          "topic": "Chapter 3 Revising & Editing"
+        },
+        {
+          "week": 7,
+          "topic": "*Effect Paragraph portfolio"
+        },
+        {
+          "week": 8,
+          "topic": "Problem-Solution Paragraph"
+        },
+        {
+          "week": 10,
+          "topic": "Chapter 10 Writing Summaries portfolio due"
+        },
+        {
+          "week": 11,
+          "topic": "brainstorming"
+        },
+        {
+          "week": 16,
+          "topic": "M Final Exam *Final Paper Portfolio due"
+        }
+      ],
+      "events": [
+        {
+          "title": "기말고사/Final",
+          "type": "exam",
+          "date": null,
+          "time": null,
+          "week": 16,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "기말고사/Final",
+          "type": "exam",
+          "date": "2026-06-15",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        }
+      ]
+    },
+    {
+      "course_id": "ae_presentation",
+      "course_no": "",
+      "name": "고급영어: 발표 (Presentation)",
+      "name_en": "",
+      "credits": null,
+      "department": "",
+      "section": "",
+      "instructor": "Hanbyul Jung",
+      "class_time": "",
+      "meeting_weekdays": [
+        0,
+        2
+      ],
+      "classroom": "",
+      "textbook": "",
+      "grading": "",
+      "no_ai_policy": false,
+      "weekly": [
+        {
+          "week": 2,
+          "topic": "Ice Breaker Research Project Guidelines"
+        },
+        {
+          "week": 3,
+          "topic": "Presentation #1 Presentation #1"
+        },
+        {
+          "week": 4,
+          "topic": "Discussions PT Example #1"
+        },
+        {
+          "week": 5,
+          "topic": "Critical Review Guidelines Special Assignment"
+        },
+        {
+          "week": 6,
+          "topic": "Discussion Circles 1 CR Group Workshop 1"
+        },
+        {
+          "week": 7,
+          "topic": "Discussion Circles 2 PT Example #2"
+        },
+        {
+          "week": 8,
+          "topic": "Discussion Circles 3 Group Meeting"
+        },
+        {
+          "week": 9,
+          "topic": "Discussion Circles 4 PT Example #3"
+        },
+        {
+          "week": 11,
+          "topic": "PT Example #4"
+        },
+        {
+          "week": 12,
+          "topic": "Final PT Prep Roundtable"
+        },
+        {
+          "week": 13,
+          "topic": "Buddha’s Birthday Final Presentation"
+        },
+        {
+          "week": 14,
+          "topic": "Final Presentation Election Day"
+        },
+        {
+          "week": 15,
+          "topic": "Final Presentation Final Presentation"
+        },
+        {
+          "week": 16,
+          "topic": "Class Review"
+        }
+      ],
+      "events": [
+        {
+          "title": "발표/Presentation",
+          "type": "presentation",
+          "date": null,
+          "time": null,
+          "week": 3,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "과제",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 5,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "기말고사/Final",
+          "type": "presentation",
+          "date": null,
+          "time": null,
+          "week": 13,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "기말고사/Final",
+          "type": "presentation",
+          "date": null,
+          "time": null,
+          "week": 14,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "기말고사/Final",
+          "type": "presentation",
+          "date": null,
+          "time": null,
+          "week": 15,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "발표/Presentation",
+          "type": "presentation",
+          "date": "2026-03-16",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "5 3/30, 4/1 Critical Review ",
+          "type": "assignment",
+          "date": "2026-03-30",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "기말고사/Final",
+          "type": "presentation",
+          "date": "2026-05-25",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "기말고사/Final",
+          "type": "presentation",
+          "date": "2026-06-01",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "기말고사/Final",
+          "type": "presentation",
+          "date": "2026-06-08",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        }
+      ]
+    },
+    {
+      "course_id": "ae_prose",
+      "course_no": "",
+      "name": "고급영어: 산문 (Prose)",
+      "name_en": "",
+      "credits": null,
+      "department": "",
+      "section": "",
+      "instructor": "Hanbyul Jung",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
+      "textbook": "",
+      "grading": "",
+      "no_ai_policy": false,
+      "weekly": [
+        {
+          "week": 2,
+          "topic": "Ice Breaker"
+        },
+        {
+          "week": 3,
+          "topic": "Reading & Discussion 1"
+        },
+        {
+          "week": 4,
+          "topic": "Reading & Discussion 2 Reading & Discussion 3*"
+        },
+        {
+          "week": 5,
+          "topic": "Reading & Discussion 4 Special Assignment"
+        },
+        {
+          "week": 6,
+          "topic": "Reading & Discussion 5 Reading & Discussion 6"
+        },
+        {
+          "week": 7,
+          "topic": "Quiz #1 Writing Workshop Prep"
+        },
+        {
+          "week": 8,
+          "topic": "Writing Workshop #1-1 Writing Workshop #1-2"
+        },
+        {
+          "week": 9,
+          "topic": "Reading & Discussion 7 Reading & Discussion 8"
+        },
+        {
+          "week": 10,
+          "topic": "Individual Meetings Individual Meetings"
+        },
+        {
+          "week": 11,
+          "topic": "Reading & Discussion 9 Reading & Discussion 10"
+        },
+        {
+          "week": 12,
+          "topic": "Reading & Discussion 11 Reading & Discussion 12"
+        },
+        {
+          "week": 13,
+          "topic": "Buddha’s Birthday Quiz #2"
+        },
+        {
+          "week": 14,
+          "topic": "Writing Workshop #2-1 Election Day"
+        },
+        {
+          "week": 15,
+          "topic": "Writing Workshop #2-2 Writing Workshop #2-3"
+        },
+        {
+          "week": 16,
+          "topic": "Class Review"
+        }
+      ],
+      "events": [
+        {
+          "title": "과제",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 5,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "Quiz 1",
+          "type": "quiz",
+          "date": null,
+          "time": null,
+          "week": 7,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "Quiz 2",
+          "type": "quiz",
+          "date": null,
+          "time": null,
+          "week": 13,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "5 3/30, 4/1 Reading & Discus",
+          "type": "assignment",
+          "date": "2026-03-30",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "Quiz 1",
+          "type": "quiz",
+          "date": "2026-04-13",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "Quiz 2",
+          "type": "quiz",
+          "date": "2026-05-25",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        }
+      ]
+    },
+    {
+      "course_id": "computer_concept_012",
+      "course_no": "F37.202",
+      "name": "컴퓨터의 개념 및 실습",
+      "name_en": "",
+      "credits": null,
+      "department": "",
+      "section": "012",
+      "instructor": "",
+      "class_time": "",
+      "meeting_weekdays": [
+        3
+      ],
+      "classroom": "",
+      "textbook": "",
+      "grading": "",
+      "no_ai_policy": false,
+      "weekly": [
+        {
+          "week": 1,
+          "topic": ": / :"
+        },
+        {
+          "week": 5,
+          "topic": ": (I)"
+        },
+        {
+          "week": 7,
+          "topic": ": (II) ❑과제 배포"
+        },
+        {
+          "week": 8,
+          "topic": "중간고사 withdraw"
+        },
+        {
+          "week": 9,
+          "topic": "주피터 노트북/구글 콜랩 설치 및 사용법 ❑ 과제"
+        },
+        {
+          "week": 11,
+          "topic": ": (II) ❑ 과제"
+        },
+        {
+          "week": 12,
+          "topic": ": (I) ❑ 과제"
+        },
+        {
+          "week": 15,
+          "topic": "Final Exam)"
+        }
+      ],
+      "events": [
+        {
+          "title": "과제",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 7,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "중간고사",
+          "type": "exam",
+          "date": null,
+          "time": null,
+          "week": 8,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "과제",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 9,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "과제",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 11,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "과제",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 12,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "기말고사/Final",
+          "type": "exam",
+          "date": null,
+          "time": null,
+          "week": 15,
+          "weekday": null,
+          "date_confirmed": false
+        }
+      ]
+    },
+    {
+      "course_id": "computer_concept_a",
+      "course_no": "F37.202",
+      "name": "컴퓨터의 개념 및 실습",
+      "name_en": "",
+      "credits": null,
+      "department": "",
+      "section": "",
+      "instructor": "",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
+      "textbook": "",
+      "grading": "⚫ 중간고사: 25%, 기말고사: 40%, 프로젝트 및 실습 Quiz: 35%, 출석: -5%",
+      "no_ai_policy": false,
+      "weekly": [
+        {
+          "week": 1,
+          "topic": ", 2주: Introduction 3주: Data and expression"
+        },
+        {
+          "week": 4,
+          "topic": "Control structure 5주: Lists"
+        },
+        {
+          "week": 6,
+          "topic": "Lists, Functions 7주: Functions,"
+        },
+        {
+          "week": 8,
+          "topic": "Objects 9주: 중간고사"
+        },
+        {
+          "week": 10,
+          "topic": "Modular design 11주: Dictionary"
+        },
+        {
+          "week": 12,
+          "topic": "Set 13주: Object-oriented programming"
+        },
+        {
+          "week": 14,
+          "topic": "Object-oriented programming 15주: 학기말고사"
+        },
+        {
+          "week": 16,
+          "topic": "Epilog"
+        }
+      ],
+      "events": [
+        {
+          "title": "중간고사",
+          "type": "exam",
+          "date": null,
+          "time": null,
+          "week": 8,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "기말고사/Final",
+          "type": "exam",
+          "date": null,
+          "time": null,
+          "week": 14,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "중간고사",
+          "type": "exam",
+          "date": "2026-04-28",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        }
+      ]
+    },
+    {
+      "course_id": "computer_concept_006",
+      "course_no": "F37.202",
+      "name": "컴퓨터의 개념 및 실습",
+      "name_en": "",
+      "credits": null,
+      "department": "",
+      "section": "006",
+      "instructor": "박수민",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
+      "textbook": "",
+      "grading": "3. 평가방법",
+      "no_ai_policy": false,
+      "weekly": [
+        {
+          "week": 1,
+          "topic": "공휴일) 1강 오리엔테이션, Git"
+        },
+        {
+          "week": 2,
+          "topic": "강 3강 파이썬 복습 & 심화"
+        },
+        {
+          "week": 3,
+          "topic": "강 5강 논리 연산, 논리 회로"
+        },
+        {
+          "week": 4,
+          "topic": "강 7강 수 표현, 문자 인코딩"
+        },
+        {
+          "week": 5,
+          "topic": "강 9강 멀티미디어, 알고리즘 입문"
+        },
+        {
+          "week": 6,
+          "topic": "강 11강 정렬/탐색, 자료구조"
+        },
+        {
+          "week": 7,
+          "topic": "강 13강 함수 심화, 재귀함수"
+        },
+        {
+          "week": 8,
+          "topic": "중간고사 (자율학습) -"
+        },
+        {
+          "week": 9,
+          "topic": "강 15강 파일 처리, 예외/디버깅"
+        },
+        {
+          "week": 10,
+          "topic": "강 17강 정규표현식"
+        },
+        {
+          "week": 11,
+          "topic": "강 19강 웹 스크래핑, API"
+        },
+        {
+          "week": 12,
+          "topic": "강 21강 numpy, pandas"
+        },
+        {
+          "week": 13,
+          "topic": "공휴일) 22강 시각화"
+        },
+        {
+          "week": 14,
+          "topic": "강 (선거일) 자연어처리"
+        },
+        {
+          "week": 15,
+          "topic": "기말고사 - -"
+        },
+        {
+          "week": 16,
+          "topic": "강 (선택) - LLM API"
+        }
+      ],
+      "events": [
+        {
+          "title": "중간고사",
+          "type": "exam",
+          "date": null,
+          "time": null,
+          "week": 8,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "기말고사/Final",
+          "type": "exam",
+          "date": null,
+          "time": null,
+          "week": 15,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "중간고사",
+          "type": "exam",
+          "date": "2026-04-20",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "기말고사/Final",
+          "type": "exam",
+          "date": "2026-06-08",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "[숙제04] (2026-03-27 금) [퀴즈] 한",
+          "type": "quiz",
+          "date": "2026-03-27",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        }
+      ]
+    },
+    {
+      "course_id": "german1",
+      "course_no": "",
+      "name": "초급독일어 1",
+      "name_en": "",
+      "credits": null,
+      "department": "",
+      "section": "",
+      "instructor": "",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
+      "textbook": "",
+      "grading": "",
+      "no_ai_policy": false,
+      "weekly": [
+        {
+          "week": 1,
+          "topic": "Lektion 1. Alphabet und Aussprache"
+        },
+        {
+          "week": 2,
+          "topic": "내용: 인사법 등"
+        },
+        {
+          "week": 3,
+          "topic": "-4주 내용: 안부 묻기 등"
+        },
+        {
+          "week": 5,
+          "topic": "내용: 가족소개 등"
+        },
+        {
+          "week": 6,
+          "topic": "-7주 Lektion 5. Meine Wohnung"
+        },
+        {
+          "week": 8,
+          "topic": "중간고사"
+        },
+        {
+          "week": 9,
+          "topic": "내용: 여가 활동 및 취미 등"
+        },
+        {
+          "week": 10,
+          "topic": "내용: 날씨 등"
+        },
+        {
+          "week": 11,
+          "topic": "-12주 내용: 길 찾기 등"
+        },
+        {
+          "week": 13,
+          "topic": "내용: 기차여행 등"
+        },
+        {
+          "week": 14,
+          "topic": "내용: 대학 생활 등"
+        },
+        {
+          "week": 15,
+          "topic": "기말고사"
+        }
+      ],
+      "events": [
+        {
+          "title": "중간고사",
+          "type": "exam",
+          "date": null,
+          "time": null,
+          "week": 8,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "기말고사/Final",
+          "type": "exam",
+          "date": null,
+          "time": null,
+          "week": 15,
+          "weekday": null,
+          "date_confirmed": false
+        }
+      ]
+    },
+    {
+      "course_id": "computer_concept_016",
+      "course_no": "F37.202",
+      "name": "컴퓨터의 개념 및 실습",
+      "name_en": "",
+      "credits": 3,
+      "department": "",
+      "section": "016",
+      "instructor": "",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
+      "textbook": "",
+      "grading": "*3. 평가방법",
+      "no_ai_policy": false,
+      "weekly": [
+        {
+          "week": 1,
+          "topic": "강의 소개 및 변수"
+        },
+        {
+          "week": 2,
+          "topic": "자료형; 조건문 및 반복문"
+        },
+        {
+          "week": 3,
+          "topic": "함수"
+        },
+        {
+          "week": 4,
+          "topic": "클래스"
+        },
+        {
+          "week": 5,
+          "topic": "시계열 자료 분석"
+        },
+        {
+          "week": 6,
+          "topic": "모듈 및 패키지"
+        },
+        {
+          "week": 7,
+          "topic": "중간고사 대체 - 개별 과제 보고서 제출"
+        },
+        {
+          "week": 8,
+          "topic": "머신러닝 소개 및 데이터 다루기"
+        },
+        {
+          "week": 9,
+          "topic": "지도학습(I)"
+        },
+        {
+          "week": 10,
+          "topic": "지도학습(II)"
+        },
+        {
+          "week": 11,
+          "topic": "지도학습(III)"
+        },
+        {
+          "week": 12,
+          "topic": "비지도학습(I)"
+        },
+        {
+          "week": 13,
+          "topic": "비지도학습(II); 최적화"
+        },
+        {
+          "week": 14,
+          "topic": "그룹 과제 발표 및 보고서 제출"
+        },
+        {
+          "week": 15,
+          "topic": "시험"
+        }
+      ],
+      "events": [
+        {
+          "title": "중간고사",
+          "type": "exam",
+          "date": null,
+          "time": null,
+          "week": 7,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "발표/Presentation",
+          "type": "assignment",
+          "date": null,
+          "time": null,
+          "week": 14,
+          "weekday": null,
+          "date_confirmed": false
+        }
+      ]
+    },
+    {
+      "course_id": "statistics_jung",
+      "course_no": "",
+      "name": "통계학",
+      "name_en": "",
+      "credits": null,
+      "department": "",
+      "section": "",
+      "instructor": "정상아",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
+      "textbook": "",
+      "grading": "평가방법 : 과제 Copy 시, 경고 없이 해당 과제는 0점 처리.",
+      "no_ai_policy": false,
+      "weekly": [],
+      "events": [
+        {
+          "title": "중간고사",
+          "type": "exam",
+          "date": "2026-04-25",
+          "time": null,
+          "week": null,
+          "weekday": 5,
+          "date_confirmed": true
+        }
+      ]
+    },
+    {
+      "course_id": "logic_002",
+      "course_no": "043.071",
+      "name": "논리학",
+      "name_en": "",
+      "credits": 3,
+      "department": "",
+      "section": "002",
+      "instructor": "오성",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
+      "textbook": "",
+      "grading": "* 3. 평가방법 수업일수의 1/3을 초과하여 결석하면 성적은 \"F\" 또는 \"U\"가 됨 (담당교수가 불가피",
+      "no_ai_policy": false,
+      "weekly": [
+        {
+          "week": 1,
+          "topic": "논리학이란 무엇인가? (수업 소개)"
+        },
+        {
+          "week": 2,
+          "topic": "논증의 개념과 종류들, 진리보존(Truth-Preservation)과 필연성(Necessity)"
+        },
+        {
+          "week": 3,
+          "topic": "귀납 논증과 과학 철학의 문제"
+        },
+        {
+          "week": 4,
+          "topic": "문장논리(1): 진리 함수(Truth Function)와 논리적 연결사(Logical Connectives)"
+        },
+        {
+          "week": 5,
+          "topic": "문장논리(2): 진리표(Truth Table)와 나무 방법(Tree Method)"
+        },
+        {
+          "week": 6,
+          "topic": "문장논리(3): 자연 연역법(Natural Deduction)"
+        },
+        {
+          "week": 7,
+          "topic": "정언논리"
+        },
+        {
+          "week": 8,
+          "topic": "중간고사"
+        },
+        {
+          "week": 9,
+          "topic": "술어논리(1): 양화사, 그리고 술어 논리의 의미론"
+        },
+        {
+          "week": 10,
+          "topic": "술어논리(2): 술어 논리의 타당한 논증들을 의미론적으로 증명하기"
+        },
+        {
+          "week": 11,
+          "topic": "술어논리(3): 우리말을 양화 문장으로 표현하기"
+        },
+        {
+          "week": 12,
+          "topic": "술어논리(4): 술어 논리의 나무 방법, 술어 논리의 자연 연역법"
+        },
+        {
+          "week": 13,
+          "topic": "술어논리(5): 동일성 술어 도입"
+        },
+        {
+          "week": 14,
+          "topic": "논리 철학의 문제: 분석/종합 구분에 대한 비판"
+        },
+        {
+          "week": 15,
+          "topic": "기말 고사"
+        }
+      ],
+      "events": [
+        {
+          "title": "중간고사",
+          "type": "exam",
+          "date": null,
+          "time": null,
+          "week": 8,
+          "weekday": null,
+          "date_confirmed": false
+        }
+      ]
+    },
+    {
+      "course_id": "intro_psychology",
+      "course_no": "E11.146",
+      "name": "심리학개론",
+      "name_en": "",
+      "credits": 1,
+      "department": "",
+      "section": "005",
+      "instructor": "이병주",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
+      "textbook": "",
+      "grading": "4. 평가방법: 중간고사(40%) + 기말고사(45%) + 연구참여(3%) + 출석(12%)",
+      "no_ai_policy": false,
+      "weekly": [
+        {
+          "week": 1,
+          "topic": "3. 3. 강의 소개"
+        },
+        {
+          "week": 2,
+          "topic": "3. 10. 심리학 연구 방법 / 생물학적 기초"
+        },
+        {
+          "week": 3,
+          "topic": "3. 17. 감각과 지각 – 우리는 외부 세계를 어떻게 알게 되는가"
+        },
+        {
+          "week": 4,
+          "topic": "3. 24. 학습 – 배움의 의미와 과정"
+        },
+        {
+          "week": 5,
+          "topic": "3. 31. 기억 – 무언가를 안다, 잊어버린다는 것은 무엇인가"
+        },
+        {
+          "week": 6,
+          "topic": "4. 7. 발달 – 일생에 걸쳐 경험하는 변화와 의미"
+        },
+        {
+          "week": 7,
+          "topic": "4. 14. 인지와 사고 – 생각의 과정과 유형"
+        },
+        {
+          "week": 8,
+          "topic": "4. 21. 정서 – 느낀다는 것의 의미와 기능"
+        },
+        {
+          "week": 9,
+          "topic": "4. 28. 중간고사"
+        },
+        {
+          "week": 10,
+          "topic": "5. 5. 성격 – 사람은 어떻게 각기 다른가 동영상 강의"
+        },
+        {
+          "week": 11,
+          "topic": "5. 12. 심리 장애와 치료 – 삶에서 경험하는 어려움과 치료법"
+        },
+        {
+          "week": 12,
+          "topic": "5. 19. 사회심리 – 혼자가 아닐 때 사람은 어떻게 달라지는가"
+        },
+        {
+          "week": 13,
+          "topic": "5. 26. 사회심리 / 조직심리"
+        },
+        {
+          "week": 14,
+          "topic": "6. 2. 조직심리 – 조직에서 경험하는 여러 현상에 대하여"
+        },
+        {
+          "week": 15,
+          "topic": "6. 9. 기말고사"
+        }
+      ],
+      "events": [
+        {
+          "title": "중간고사",
+          "type": "exam",
+          "date": null,
+          "time": null,
+          "week": 9,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "기말고사/Final",
+          "type": "exam",
+          "date": null,
+          "time": null,
+          "week": 15,
+          "weekday": null,
+          "date_confirmed": false
+        }
+      ]
+    },
+    {
+      "course_id": "seoul_lecture",
+      "course_no": "",
+      "name": "서울 (관악모둠강좌)",
+      "name_en": "",
+      "credits": null,
+      "department": "",
+      "section": "",
+      "instructor": "김경민",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
+      "textbook": "",
+      "grading": "",
+      "no_ai_policy": false,
+      "weekly": [
+        {
+          "week": 1,
+          "topic": "강의 소개 및 근대 도시 형성 (경성과 서울의 형성)"
+        },
+        {
+          "week": 2,
+          "topic": "산업화와 도시화"
+        },
+        {
+          "week": 3,
+          "topic": "산업도시의 문제점 해결안 (전원도시)"
+        },
+        {
+          "week": 4,
+          "topic": "서울 산업 자원 답사"
+        },
+        {
+          "week": 5,
+          "topic": "기념비적 도시 (City Monumental)란?"
+        },
+        {
+          "week": 6,
+          "topic": "The Modernist City"
+        },
+        {
+          "week": 7,
+          "topic": "그룹 발표: 「도시에서의 아름다움이란 무엇인가?」"
+        },
+        {
+          "week": 8,
+          "topic": "교외화의 시작"
+        },
+        {
+          "week": 9,
+          "topic": "서울 역사 자원 답사"
+        },
+        {
+          "week": 10,
+          "topic": "도심 쇠퇴"
+        },
+        {
+          "week": 11,
+          "topic": "도시 재생 – 쇠퇴한 지역을 어떻게 되살릴 것인가"
+        },
+        {
+          "week": 12,
+          "topic": "글로벌 서울의 가능성 답사"
+        },
+        {
+          "week": 13,
+          "topic": "디벨로퍼의 도시"
+        },
+        {
+          "week": 14,
+          "topic": "글로벌 G2, 서울"
+        },
+        {
+          "week": 15,
+          "topic": "그룹 발표 : 「우리가 생각하는 서울의 가능성」"
+        }
+      ],
+      "events": [
+        {
+          "title": "발표/Presentation",
+          "type": "presentation",
+          "date": null,
+          "time": null,
+          "week": 7,
+          "weekday": null,
+          "date_confirmed": false
+        },
+        {
+          "title": "발표/Presentation",
+          "type": "presentation",
+          "date": null,
+          "time": null,
+          "week": 15,
+          "weekday": null,
+          "date_confirmed": false
+        }
+      ]
+    },
+    {
+      "course_id": "college_english1_005",
+      "course_no": "F21.101",
+      "name": "대학영어 1",
+      "name_en": "",
+      "credits": null,
+      "department": "",
+      "section": "005",
+      "instructor": "",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
+      "textbook": "",
+      "grading": "",
+      "no_ai_policy": false,
+      "weekly": [
+        {
+          "week": 9,
+          "topic": ", you will have an individual oral exam. The exam will include questions related"
+        }
+      ],
+      "events": []
+    },
+    {
+      "course_id": "psychology_relationships",
+      "course_no": "E11.163",
+      "name": "인간관계의 심리학",
+      "name_en": "",
+      "credits": 3,
+      "department": "",
+      "section": "001",
+      "instructor": "김효정",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
+      "textbook": "",
+      "grading": "1) 출석(18%): 강의 + 조별활동 출석, 성적 산출 시 모든 출석을 합산한 후 18%로 환산",
+      "no_ai_policy": false,
+      "weekly": [],
+      "events": [
+        {
+          "title": "발표/Presentation",
+          "type": "presentation",
+          "date": "2026-07-08",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "발표/Presentation",
+          "type": "presentation",
+          "date": "2026-07-20",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "발표/Presentation",
+          "type": "presentation",
+          "date": "2026-07-24",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        },
+        {
+          "title": "기말고사/Final",
+          "type": "exam",
+          "date": "2026-07-27",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        }
+      ]
+    },
+    {
+      "course_id": "north_korea_studies",
+      "course_no": "",
+      "name": "북한학개론",
+      "name_en": "",
+      "credits": 3,
+      "department": "",
+      "section": "002",
+      "instructor": "배영애",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
+      "textbook": "",
+      "grading": "3. 평가방법 * 시험 범위에 들어가지 않는 ppt번호를 따로 정리해서 7월 17일 eTL에 미리 공지함.",
+      "no_ai_policy": false,
+      "weekly": [],
+      "events": [
+        {
+          "title": "기말고사/Final",
+          "type": "exam",
+          "date": "2026-07-27",
+          "time": null,
+          "week": null,
+          "weekday": null,
+          "date_confirmed": true
+        }
+      ]
+    },
+    {
+      "course_id": "discrete_math",
+      "course_no": "4190.101",
+      "name": "이산수학",
+      "name_en": "",
+      "credits": 3,
+      "department": "",
+      "section": "001",
+      "instructor": "",
+      "class_time": "",
+      "meeting_weekdays": [
+        1,
+        3
+      ],
+      "classroom": "",
+      "textbook": "",
+      "grading": "",
+      "no_ai_policy": false,
+      "weekly": [],
+      "events": []
+    },
+    {
+      "course_id": "veritas_sports",
+      "course_no": "",
+      "name": "베리타스 강좌 1: 스포츠로 배우는 경쟁과 협력",
+      "name_en": "",
+      "credits": null,
+      "department": "",
+      "section": "",
+      "instructor": "최석환",
+      "class_time": "",
+      "meeting_weekdays": [],
+      "classroom": "",
+      "textbook": "",
+      "grading": "- 출석 및 수업활동 : 40% - 토론참여 : 30% - 개인과제 : 30%",
+      "no_ai_policy": false,
+      "weekly": [
+        {
+          "week": 1,
+          "topic": "교과목 소개 및 활동팀 배정 (20명, 6예개 정조 ) B: 주차별 수업 안내"
+        },
+        {
+          "week": 2,
+          "topic": "A, B, C: 협력수업"
+        },
+        {
+          "week": 3,
+          "topic": "B, C: 관점의 확장 제시"
+        },
+        {
+          "week": 4,
+          "topic": "대한체육회, 한국스포츠과학원, 국민체육진흥공단,"
+        },
+        {
+          "week": 5,
+          "topic": "A, B: 관점의 확장 제시"
+        },
+        {
+          "week": 6,
+          "topic": "* 자세한 사항은 추후 안내 예정"
+        },
+        {
+          "week": 7,
+          "topic": "A, C: 관점의 확장 제시"
+        },
+        {
+          "week": 8,
+          "topic": "C: 1, 2조 담당"
+        },
+        {
+          "week": 9,
+          "topic": "B, C: 관점의 확장 제시"
+        },
+        {
+          "week": 10,
+          "topic": "A, B, C: 협력수업"
+        },
+        {
+          "week": 11,
+          "topic": "A, C: 관점의 확장 제시"
+        },
+        {
+          "week": 12,
+          "topic": "** 5주차 ~ 11주차 사이 방문"
+        },
+        {
+          "week": 13,
+          "topic": "A, B: 관점의 확장 제시"
+        },
+        {
+          "week": 14,
+          "topic": "특강 및 특강내용 종합토론"
+        },
+        {
+          "week": 15,
+          "topic": "스포츠에서의 경쟁과 협력을 통해 본 미래 사회 B: 조별 발표 및 질의 응답"
+        }
+      ],
+      "events": [
+        {
+          "title": "발표/Presentation",
+          "type": "presentation",
+          "date": null,
+          "time": null,
+          "week": 15,
+          "weekday": null,
+          "date_confirmed": false
+        }
       ]
     }
   ]

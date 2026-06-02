@@ -149,8 +149,8 @@ def _extract_grading(text: str) -> str:
 
 # 줄 시작 또는 짧은 라벨(예: '계획 3주') 뒤의 주차 표기를 잡는다.
 _WEEK_PATTERNS = [
-    re.compile(r"(?:^|\s)(\d{1,2})\s*주(?![가-힣])"),   # '1주', '계획 3주' (단 '13주에...' 같은 접속은 제외)
-    re.compile(r"(?:^|\s)[Ww]eek\s*(\d{1,2})"),          # 'Week 1'
+    re.compile(r"(?:^|\s)(\d{1,2})\s*주차?(?![가-힣])"),  # '1주', '1주차', '계획 3주' (단 '13주에/주차별'은 제외)
+    re.compile(r"(?:^|\s)[Ww]eek\s*(\d{1,2})"),           # 'Week 1'
 ]
 
 
@@ -161,7 +161,8 @@ def _extract_weekly(text: str) -> list[dict]:
         wk = None
         for pat in _WEEK_PATTERNS:
             m = pat.search(line)
-            if m and m.start() <= 6:  # 주차 표기는 줄 앞쪽에만 (라벨 허용)
+            # 줄 앞쪽이거나(라벨 허용) 바로 뒤에 콜론이 오는 'N주차:' 형식이면 인정
+            if m and (m.start() <= 8 or (m.end() < len(line) and line[m.end()] in ":：")):
                 wk = int(m.group(1))
                 topic = line[m.end():]
                 break
@@ -186,6 +187,35 @@ def _extract_weekly(text: str) -> list[dict]:
             wk = int(m.group(1))
             if 1 <= wk <= 20 and wk not in weekly:
                 weekly[wk] = m.group(2).strip()[:120]
+
+    # 'W1: 주제' 형식 (일부 강의계획서)
+    if len(weekly) < 5:
+        for m in re.finditer(r"(?:^|\s)W(\d{1,2})\s*[:：]\s*([^\n]{2,80})", text):
+            wk = int(m.group(1))
+            if 1 <= wk <= 20 and wk not in weekly:
+                weekly[wk] = m.group(2).strip()[:100]
+
+    # '주차 | 월 | 수 | 주제' 표처럼 주차가 '숫자'로만 시작하는 표 (헤더 인식 후 파싱)
+    if len(weekly) < 5:
+        started = False
+        for l in lines:
+            if not started:
+                if ("주차" in l and ("월요일" in l or "수요일" in l or "주제" in l)) \
+                   or re.search(r"Schedule\s+Monday|Week\s+Date\s+Topic", l):
+                    started = True
+                continue
+            m = re.match(r"\s*(\d{1,2})\s+(.+)", l)
+            if not m:
+                continue
+            wk = int(m.group(1))
+            if not (1 <= wk <= 20) or wk in weekly:
+                continue
+            topic = m.group(2)
+            # 앞의 날짜/요일/강번호 토큰 제거
+            topic = re.sub(r"^[\(\)0-9/\.\s월화수목금토일~,\-]+", "", topic)
+            topic = re.sub(r"^\d+강\s*", "", topic).strip()
+            if len(topic) >= 2:
+                weekly[wk] = topic[:100]
 
     return [{"week": w, "topic": t} for w, t in sorted(weekly.items())]
 
@@ -278,12 +308,19 @@ def _extract_events(text: str, weekly: list[dict]) -> list[dict]:
         if not t:
             continue
         date_iso = None
-        for pat in _DATE_PATTERNS:
-            m = pat.search(line)
-            if m:
-                date_iso = _guess_md(int(m.group(1)), int(m.group(2)))
-                if date_iso:
-                    break
+        m_iso = re.search(r"(20\d{2})-(\d{1,2})-(\d{1,2})", line)  # ISO: 2026-04-20
+        if m_iso:
+            try:
+                date_iso = dt.date(int(m_iso.group(1)), int(m_iso.group(2)), int(m_iso.group(3))).isoformat()
+            except ValueError:
+                date_iso = None
+        if not date_iso:
+            for pat in _DATE_PATTERNS:
+                m = pat.search(line)
+                if m:
+                    date_iso = _guess_md(int(m.group(1)), int(m.group(2)))
+                    if date_iso:
+                        break
         if not date_iso:
             continue
         title = line.strip()[:50]

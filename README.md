@@ -8,10 +8,10 @@ import 할 수 있는 **`.ics` 파일**을 만들어 줍니다.
 
 | 이름 | 학번 | 역할 |
 |---|---|---|
-| (작성) | (작성) | 강의계획서 파싱 / LLM 추출기 |
-| (작성) | (작성) | 캘린더 통합 · 과부하 감지 로직 |
-| (작성) | (작성) | 웹 UI (Flask) · .ics 생성 |
-| (작성) | (작성) | mock 데이터셋 구축 · README · 테스트 |
+| 임예온 | 2026-13116 | 전체 코드 개발 (PDF 파서 · LLM 추출기 · 캘린더 빌더 · 웹앱 · 배포) |
+| 김주헌 | 2026-18791 | 강의계획서 데이터셋 수집 · 동작 테스트/QA |
+| 하채민 | 2026-10353 | 아이디어 제공 · 강의계획서 데이터셋 수집 |
+| 양현영 | 2026-10416 | 아이디어 제공 · 강의계획서 데이터셋 수집 |
 
 ## 1. Problem
 
@@ -31,9 +31,9 @@ SyllaSync는 강의계획서를 자동으로 분석해 학기 전체 일정을 �
 
 ## 3. Assumed Campus Data
 
-`data/courses.json` 에 과목별 정보를 저장합니다. 이 데이터는 **실제 2026-1학기 강의계획서 PDF
-5종**(`data/syllabi/` 에 동봉)에서 추출해 만든 것이며, 실제 서비스에서는 같은 형식으로 20~40개
-과목까지 확장할 수 있습니다.
+`data/courses.json` 에 과목별 정보를 저장합니다. 이 데이터는 **실제 2026학년도 서울대 강의계획서
+PDF 약 30여 개**(`data/syllabi/` 에 동봉)에서 추출해 만든 것입니다. 같은 과목이라도 교수·분반이
+다르면 별도 항목으로 저장되어(예: 「컴퓨터의 개념 및 실습」 012/006/016 분반), 분반별로 선택할 수 있습니다.
 
 | File | Columns / Fields | Description |
 |---|---|---|
@@ -52,10 +52,11 @@ SyllaSync는 강의계획서를 자동으로 분석해 학기 전체 일정을 �
 ```json
 {
   "selected_courses": [
-    "034.001",
-    "physics_lab_1",
-    "english_foundations_008",
-    "academic_writing_1"
+    "physics1",
+    "physics_lab1",
+    "english_foundations",
+    "academic_writing1",
+    "statistics_lab"
   ]
 }
 ```
@@ -73,7 +74,7 @@ SyllaSync는 강의계획서를 자동으로 분석해 학기 전체 일정을 �
       │     · API 키 있음 → LLM 호출로 구조화 JSON 추출 (과제/시험/퀴즈 자동 분류)
       │     · API 키 없음 → 규칙 기반 파서로 폴백
       ▼
-[구조화 데이터 courses.json]  ← 동봉된 5과목은 미리 구축됨
+[구조화 데이터 courses.json]  ← 동봉된 30여 개 과목은 미리 구축됨
       │
 [사용자 입력: 듣는 과목 선택]  (sample_input.json / 웹 체크박스)
       │  src/calendar_builder.py
@@ -102,7 +103,7 @@ python main.py
 python main.py --cli
 ```
 
-> **API 키 없이도 그대로 실행됩니다.** 동봉된 5개 과목 데이터셋과 규칙 기반 분석으로 동작합니다.
+> **API 키 없이도 그대로 실행됩니다.** 동봉된 30여 개 과목 데이터셋과 규칙 기반 분석으로 동작합니다.
 > 새 PDF를 LLM으로 정확히 분석하고 싶다면 `pip install openai` (또는 `anthropic`) 후 환경변수
 > `OPENAI_API_KEY`(또는 `ANTHROPIC_API_KEY`)를 설정하세요. 그러면 업로드한 강의계획서를
 > 실시간으로 분석합니다.
@@ -144,9 +145,7 @@ python main.py --cli
 
 ## 8. Team Contributions
 
-- **강의계획서 파싱 / LLM 추출기**: `src/pdf_parser.py`, `src/llm_extractor.py` — PDF 텍스트 추출 및 LLM/규칙 기반 하이브리드 구조화
-- **캘린더 통합 · 과부하 감지**: `src/calendar_builder.py` — 다과목 일정 병합, 주차 단위 과부하 탐지, TBD 처리
-- **웹 UI · .ics 생성**: `src/app.py`, `src/ics_export.py`, `main.py` — Flask 화면, iCalendar 파일 생성
-- **데이터셋 · README · 테스트**: `data/courses.json`, `data/syllabi/`, 본 문서 및 실행 검증
-
-*(각 팀원 이름과 학번을 위 0번 표와 함께 채워주세요.)*
+- **임예온 (2026-13116)** — 전체 코드 개발. PDF 파서(`src/pdf_parser.py`), LLM/규칙 기반 하이브리드 추출기(`src/llm_extractor.py`), 캘린더 통합·과부하 감지(`src/calendar_builder.py`), 웹 UI 및 `.ics` 생성(`src/app.py`, `src/ics_export.py`, `main.py`), Render 배포 설정 전반을 담당.
+- **김주헌 (2026-18791)** — 강의계획서 데이터셋 수집 및 정리, 다양한 PDF 형식에 대한 동작 테스트/QA(파싱 결과 검수).
+- **하채민 (2026-10353)** — 프로젝트 아이디어 제공(강의계획서→학기 캘린더 자동화), 강의계획서 데이터셋 수집.
+- **양현영 (2026-10416)** — 프로젝트 아이디어 제공, 강의계획서 데이터셋 수집.
