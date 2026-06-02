@@ -14,8 +14,11 @@
       "department": "",
       "section": "046",
       "instructor": "권오남",
-      "class_time": "",
-      "meeting_weekdays": [],
+      "class_time": "화·목 (격주)",
+      "meeting_weekdays": [
+        1,
+        3
+      ],
       "classroom": "",
       "textbook": "",
       "grading": "3. 평가방법",
@@ -32,8 +35,10 @@
       "department": "",
       "section": "",
       "instructor": "Nick Clements",
-      "class_time": "",
-      "meeting_weekdays": [],
+      "class_time": "월",
+      "meeting_weekdays": [
+        0
+      ],
       "classroom": "",
       "textbook": "",
       "grading": "",
@@ -281,8 +286,11 @@
       "department": "",
       "section": "003",
       "instructor": "최미",
-      "class_time": "",
-      "meeting_weekdays": [],
+      "class_time": "월·수 9:30-10:45",
+      "meeting_weekdays": [
+        0,
+        2
+      ],
       "classroom": "",
       "textbook": "",
       "grading": "성적비율 20% 40% 40% 100%",
@@ -740,7 +748,7 @@
       "department": "",
       "section": "008",
       "instructor": "Heeyoun Cho",
-      "class_time": "",
+      "class_time": "화·목 11:00-12:15",
       "meeting_weekdays": [
         1,
         3
@@ -1118,8 +1126,11 @@
       "department": "",
       "section": "003",
       "instructor": "조대식",
-      "class_time": "",
-      "meeting_weekdays": [],
+      "class_time": "화·목 12:30-13:45",
+      "meeting_weekdays": [
+        1,
+        3
+      ],
       "classroom": "",
       "textbook": "",
       "grading": "성적비율 5 0 45 45 0 5 100%",
@@ -1402,7 +1413,7 @@
       "department": "",
       "section": "",
       "instructor": "Jane Lim",
-      "class_time": "",
+      "class_time": "화·목 14:00-15:15",
       "meeting_weekdays": [
         1,
         3
@@ -1442,7 +1453,7 @@
       "department": "",
       "section": "009",
       "instructor": "Hansol Oh",
-      "class_time": "",
+      "class_time": "월·수",
       "meeting_weekdays": [
         0,
         2
@@ -1519,7 +1530,7 @@
       "department": "",
       "section": "",
       "instructor": "Hanbyul Jung",
-      "class_time": "",
+      "class_time": "월·수 12:30-13:45",
       "meeting_weekdays": [
         0,
         2
@@ -1688,8 +1699,11 @@
       "department": "",
       "section": "",
       "instructor": "Hanbyul Jung",
-      "class_time": "",
-      "meeting_weekdays": [],
+      "class_time": "월·수",
+      "meeting_weekdays": [
+        0,
+        2
+      ],
       "classroom": "",
       "textbook": "",
       "grading": "",
@@ -1822,7 +1836,7 @@
       "department": "",
       "section": "012",
       "instructor": "",
-      "class_time": "",
+      "class_time": "목 9:00-12:50",
       "meeting_weekdays": [
         3
       ],
@@ -1930,8 +1944,10 @@
       "department": "",
       "section": "",
       "instructor": "문수묵",
-      "class_time": "",
-      "meeting_weekdays": [],
+      "class_time": "화 13:00-14:50",
+      "meeting_weekdays": [
+        1
+      ],
       "classroom": "",
       "textbook": "",
       "grading": "⚫ 중간고사: 25%, 기말고사: 40%, 프로젝트 및 실습 Quiz: 35%, 출석: -5%",
@@ -2009,8 +2025,11 @@
       "department": "",
       "section": "006",
       "instructor": "박수민",
-      "class_time": "",
-      "meeting_weekdays": [],
+      "class_time": "월·수",
+      "meeting_weekdays": [
+        0,
+        2
+      ],
       "classroom": "",
       "textbook": "",
       "grading": "3. 평가방법",
@@ -2224,8 +2243,11 @@
       "department": "",
       "section": "016",
       "instructor": "양수현",
-      "class_time": "",
-      "meeting_weekdays": [],
+      "class_time": "화·목 14:00-15:50",
+      "meeting_weekdays": [
+        1,
+        3
+      ],
       "classroom": "",
       "textbook": "",
       "grading": "*3. 평가방법",
@@ -2635,8 +2657,11 @@
       "department": "",
       "section": "005",
       "instructor": "Kyungjin Jo",
-      "class_time": "",
-      "meeting_weekdays": [],
+      "class_time": "월·수",
+      "meeting_weekdays": [
+        0,
+        2
+      ],
       "classroom": "",
       "textbook": "",
       "grading": "",
@@ -2741,7 +2766,7 @@
       "department": "",
       "section": "001",
       "instructor": "송용수",
-      "class_time": "",
+      "class_time": "화목 11:00-12:15",
       "meeting_weekdays": [
         1,
         3
