@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="500" viewBox="0 0 720 500" font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+  <rect width="720" height="500" fill="#f8fafc"/>
+
+  <!-- 마감 임박 배너 -->
+  <rect x="24" y="16" width="672" height="70" rx="10" fill="#fff1f2" stroke="#fecdd3"/>
+  <text x="40" y="40" font-size="13.5" font-weight="700" fill="#be123c">🔔 마감 임박 (오늘 기준 14일 이내)</text>
+  <text x="40" y="60" font-size="12" fill="#be123c">· D-1  2026-06-02 — 기초영어 · Presentation</text>
+  <text x="40" y="76" font-size="12" fill="#be123c">· D-10 2026-06-11 — 기초영어 · Final Exam   · D-11 2026-06-12 — 물리학 1 · 기말고사</text>
+
+  <!-- 과부하 -->
+  <rect x="24" y="96" width="672" height="44" rx="10" fill="#fef2f2" stroke="#fecaca"/>
+  <text x="40" y="114" font-size="13" font-weight="700" fill="#b91c1c">⚠️ 과부하 주의 주차</text>
+  <text x="40" y="131" font-size="11.5" fill="#b91c1c">· 2026-06-08 주: 마감/시험 6건 몰림 (기말고사 3건, 보고서 2건, HW #5)</text>
+
+  <!-- 범례 -->
+  <g font-size="11">
+    <text x="24" y="162" fill="#7c3aed">📘 강의</text>
+    <text x="84" y="162" fill="#2563eb">■ 과제</text>
+    <text x="140" y="162" fill="#ea580c">■ 퀴즈</text>
+    <text x="196" y="162" fill="#dc2626">■ 시험</text>
+    <text x="252" y="162" fill="#db2777">■ 발표</text>
+    <text x="320" y="162" fill="#64748b">· 칩 왼쪽 색띠 = 과목 구분</text>
+  </g>
+
+  <text x="24" y="188" font-size="15" font-weight="700" fill="#0f172a">2026년 6월</text>
+
+  <!-- 달력 헤더 -->
+  <g font-size="11" fill="#64748b">
+    <rect x="24" y="196" width="672" height="22" fill="#f1f5f9"/>
+    <text x="60" y="211" text-anchor="middle">월</text><text x="156" y="211" text-anchor="middle">화</text>
+    <text x="252" y="211" text-anchor="middle">수</text><text x="348" y="211" text-anchor="middle">목</text>
+    <text x="444" y="211" text-anchor="middle">금</text><text x="540" y="211" text-anchor="middle" fill="#f87171">토</text>
+    <text x="636" y="211" text-anchor="middle" fill="#f87171">일</text>
+  </g>
+
+  <!-- 그리드 (2주만 표시) -->
+  <g stroke="#e2e8f0" fill="#fff">
+    <rect x="24" y="218" width="96" height="120"/><rect x="120" y="218" width="96" height="120"/>
+    <rect x="216" y="218" width="96" height="120"/><rect x="312" y="218" width="96" height="120"/>
+    <rect x="408" y="218" width="96" height="120"/><rect x="504" y="218" width="96" height="120" fill="#f8fafc"/>
+    <rect x="600" y="218" width="96" height="120" fill="#f8fafc"/>
+    <rect x="24" y="338" width="96" height="130"/><rect x="120" y="338" width="96" height="130"/>
+    <rect x="216" y="338" width="96" height="130"/><rect x="312" y="338" width="96" height="130"/>
+    <rect x="408" y="338" width="96" height="130"/><rect x="504" y="338" width="96" height="130" fill="#f8fafc"/>
+    <rect x="600" y="338" width="96" height="130" fill="#f8fafc"/>
+  </g>
+
+  <!-- 날짜 숫자 (1주차: 1~7) -->
+  <g font-size="10" fill="#94a3b8">
+    <text x="30" y="232">1</text><text x="126" y="232">2</text><text x="222" y="232">3</text>
+    <text x="318" y="232">4</text><text x="414" y="232">5</text><text x="510" y="232">6</text><text x="606" y="232">7</text>
+    <text x="30" y="352">8</text><text x="126" y="352">9</text><text x="222" y="352">10</text>
+    <text x="318" y="352">11</text><text x="414" y="352">12</text><text x="510" y="352">13</text><text x="606" y="352">14</text>
+  </g>
+
+  <!-- 칩 -->
+  <g font-size="9">
+    <!-- 6/1 강의 -->
+    <rect x="28" y="238" width="88" height="15" rx="3" fill="#f3e8ff" stroke="#9333ea" stroke-width="2" stroke-dasharray="0"/>
+    <rect x="28" y="238" width="3" height="15" fill="#9333ea"/><text x="34" y="249" fill="#7c3aed">📘 발표 및 상호 논평</text>
+    <!-- 6/2 발표 -->
+    <rect x="124" y="238" width="88" height="15" rx="3" fill="#fce7f3"/><rect x="124" y="238" width="3" height="15" fill="#16a34a"/>
+    <text x="130" y="249" fill="#be185d">Presentation</text>
+    <!-- 6/11 기말 -->
+    <rect x="316" y="358" width="88" height="15" rx="3" fill="#fee2e2"/><rect x="316" y="358" width="3" height="15" fill="#16a34a"/>
+    <text x="322" y="369" fill="#b91c1c">Final Exam</text>
+    <!-- 6/12 기말 물리 -->
+    <rect x="412" y="358" width="88" height="15" rx="3" fill="#fee2e2"/><rect x="412" y="358" width="3" height="15" fill="#dc2626"/>
+    <text x="418" y="369" fill="#b91c1c">기말고사 19:00</text>
+    <!-- 6/8 HW -->
+    <rect x="28" y="358" width="88" height="15" rx="3" fill="#dbeafe"/><rect x="28" y="358" width="3" height="15" fill="#2563eb"/>
+    <text x="34" y="369" fill="#1d4ed8">개인 보고서</text>
+    <!-- 6/13 글쓰기 기말 -->
+    <rect x="508" y="358" width="88" height="15" rx="3" fill="#fee2e2"/><rect x="508" y="358" width="3" height="15" fill="#ea580c"/>
+    <text x="514" y="369" fill="#b91c1c">기말(종합시험)</text>
+  </g>
+</svg>

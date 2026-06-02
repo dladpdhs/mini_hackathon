@@ -21,7 +21,7 @@ gunicorn src.app:app --bind 0.0.0.0:8000
 Render는 GitHub 저장소를 연결해 자동 배포합니다.
 
 ```bash
-cd teamXX
+cd team10
 git init
 git add .
 git commit -m "SyllaSync"

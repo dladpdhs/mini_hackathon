@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="440" viewBox="0 0 720 440" font-family="-apple-system,Segoe UI,Roboto,sans-serif">
+  <rect width="720" height="440" fill="#f8fafc"/>
+  <text x="32" y="48" font-size="22" font-weight="700" fill="#0f172a">📅 SyllaSync</text>
+  <text x="32" y="72" font-size="13" fill="#64748b">강의계획서를 분석해 한 학기 캘린더를 자동으로 만들어 드립니다.</text>
+
+  <!-- card -->
+  <rect x="32" y="92" width="656" height="316" rx="12" fill="#ffffff" stroke="#e2e8f0"/>
+  <text x="52" y="122" font-size="14" font-weight="700" fill="#0f172a">1) 듣는 과목을 선택하세요</text>
+  <rect x="52" y="134" width="616" height="34" rx="6" fill="#fff" stroke="#cbd5e1"/>
+  <text x="66" y="156" font-size="13" fill="#94a3b8">과목명·교수로 검색...</text>
+
+  <!-- group rows -->
+  <rect x="52" y="180" width="616" height="36" rx="6" fill="#fff" stroke="#e2e8f0"/>
+  <text x="68" y="203" font-size="13.5" font-weight="600" fill="#0f172a">물리학 1</text>
+  <text x="640" y="203" font-size="11" fill="#94a3b8" text-anchor="end">선택 ▾</text>
+
+  <!-- expanded group -->
+  <rect x="52" y="222" width="616" height="120" rx="6" fill="#fff" stroke="#cbd5e1"/>
+  <text x="68" y="245" font-size="13.5" font-weight="600" fill="#0f172a">컴퓨터의 개념 및 실습</text>
+  <text x="640" y="245" font-size="11" fill="#94a3b8" text-anchor="end">4개 분반 ▾</text>
+  <line x1="52" y1="256" x2="668" y2="256" stroke="#e2e8f0"/>
+  <rect x="60" y="256" width="608" height="86" fill="#f8fafc"/>
+  <!-- section rows -->
+  <g font-size="12.5">
+    <circle cx="80" cy="276" r="5" fill="#2563eb"/><text x="94" y="280" fill="#0f172a">박수민 · 006분반</text><text x="300" y="280" fill="#94a3b8">3학점</text>
+    <rect x="78" y="290" width="11" height="11" rx="2" fill="#fff" stroke="#94a3b8"/><text x="98" y="300" fill="#0f172a">양수현 · 016분반</text><text x="300" y="300" fill="#94a3b8">3학점 · 화/목</text>
+    <circle cx="83" cy="320" r="5" fill="#16a34a"/><text x="98" y="324" fill="#0f172a">012분반</text><text x="300" y="324" fill="#94a3b8">3학점 · 목 오전</text>
+  </g>
+  <rect x="76" y="270" width="11" height="11" rx="2" fill="#2563eb"/>
+  <rect x="78" y="315" width="11" height="11" rx="2" fill="#16a34a"/>
+
+  <rect x="52" y="356" width="616" height="38" rx="8" fill="#0f172a"/>
+  <text x="360" y="380" font-size="13.5" font-weight="600" fill="#fff" text-anchor="middle">학기 캘린더 만들기</text>
+</svg>
